@@ -98,7 +98,7 @@ export class MainPageComponent implements OnInit {
       // this.language = res;
     })
   }
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   sendRegistrationData() {
     const form = this.form.value;
@@ -160,6 +160,21 @@ export class MainPageComponent implements OnInit {
               });
           });
       });
+  }
+
+  firstBlock: boolean = false;
+
+  expand(idx: number) {
+    switch (idx) {
+      case 1:
+        this.firstBlock = !this.firstBlock;
+        break;
+      case 2:
+        this.firstBlock = !this.firstBlock;
+        break;
+      default:
+        break;
+    }
   }
 
   goToURl(url) {
