@@ -1678,6 +1678,9 @@ body {
   }
 }
 @media (max-width: 480px) {
+  .list-item {
+    margin-bottom: 10px;
+  }
   .m_top {
     font-size: 24px;
   }
@@ -1719,9 +1722,13 @@ body {
     margin-right: 10px;
     height: 25px;
   }
-
   .lamp {
-    margin-top: -50px !important;
+    position: absolute;
+    right: 0;
+    bottom: 55px;
+  }
+  .g_title {
+    margin-top: 45px !important;
   }
 }
 @media (max-width: 380px) {

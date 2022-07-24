@@ -6,10 +6,10 @@
           <div class="header_wrapper">
             <div class="menu_wrap">
               <div class="w_wrap">
-                <p class="text_gen" (click)="scrollTo('div-about-guru')">О Гуру</p>
-                <p class="text_gen" (click)="scrollTo('div-about-program')">Программа</p>
+                <p class="text_gen" (click)="scrollTo('about_guru')">О Гуру</p>
+                <p class="text_gen" (click)="scrollTo('about_program')">Программа</p>
                 <!-- <p class="text_gen" (click)="scrollTo('div-qa')">Вопросы и ответы</p> -->
-                <p class="text_gen" (click)="scrollTo('div-contacts')">Контакты</p>
+                <p class="text_gen" (click)="scrollTo('contacts')">Контакты</p>
               </div>
             </div>
           </div>
@@ -51,8 +51,8 @@
       </div>
       <div class="bottom_section">
         <div class="buttons_wrap">
-          <button class="btn_gen s">Оставить заявку</button>
-          <button class="btn_gen">Программа тура</button>
+          <button (click)="scrollTo('apply')" class="btn_gen s">Оставить заявку</button>
+          <button (click)="scrollTo('about_program')" class="btn_gen">Программа тура</button>
         </div>
         <p class="lamp">
           <img src="assets/Images/lamp.png" alt="lamp">
@@ -63,7 +63,7 @@
     </div>
   </div>
   <div class="bl_second">
-    <div class="wrapper">
+    <div id="about_guru" class="wrapper">
       <div class="m_wrapper">
         <div class="s_wrap">
           <div class="block_master left">
@@ -130,16 +130,16 @@
         </div>
         <div class="bottom_social">
           <p class="more">Больше информации на страницах:</p>
-          <p class="more"><img class="soc_l" src="assets/Images/insta.png" alt="instagram"> swami_vishnudevananda_giri
+          <p (click)="goToURl('https://instagram.com/swami_vishnudevananda_giri')"  class="more"><img class="soc_l" src="assets/Images/insta.png" alt="instagram"> swami_vishnudevananda_giri
           </p>
-          <p class="more"><img class="soc_l" src="assets/Images/telega.png" alt="telegram"> swami_vishnudevananda_giri
+          <p (click)="goToURl('https://t.me/swami_vishnudevananda_giri')"  class="more"><img class="soc_l" src="assets/Images/telega.png" alt="telegram"> swami_vishnudevananda_giri
           </p>
         </div>
       </div>
     </div>
   </div>
   <div class="bl_height">
-    <div class="wrapper">
+    <div id="about_program" class="wrapper">
       <div class="bh_wrapper">
         <p class="m_top"><span></span>Этапы и программа тура<span class="f"></span></p>
         <div class="level_wrap">
@@ -505,7 +505,7 @@
     </div>
   </div>
   <div class="program-forum">
-    <div class="wrapper">
+    <div id="apply" class="wrapper">
       <div class="registration-form flex flex-col">
         <div class="top_wrap">
           <p class="form_t">Отправить заявку на тур</p>

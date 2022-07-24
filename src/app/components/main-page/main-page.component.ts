@@ -14,6 +14,13 @@ import { GeneralServiceService } from 'src/app/services/general-service.service'
 
 export class MainPageComponent implements OnInit {
   url = "https://b24-ay5iam.bitrix24.eu/rest/4/95igs0uaxwczeh83/";
+  firstBlock: boolean = false;
+  secondBlock: boolean = false;
+  thirdBlock: boolean = false;
+  fourthBlock: boolean = false;
+  fifthBlock: boolean = false;
+  sixBlock: boolean = false;
+  seventhBlock: boolean = false;
 
   @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
     let header = document.querySelector('.head_wrap')
@@ -24,6 +31,8 @@ export class MainPageComponent implements OnInit {
   first: number = 0;
   middle: number = 1;
   last: number = 2;
+  form: FormGroup;
+  routeParams;
   slides: any = [
     {
       index: 0,
@@ -64,12 +73,14 @@ export class MainPageComponent implements OnInit {
   ]
 
   next() {
-    console.log(this.last, this.slides.length)
     if (this.last < this.slides.length - 1) {
       this.first = this.first + 1;
       this.middle = this.middle + 1;
       this.last = this.last + 1;
-      console.log(this.first, this.middle, this.last)
+    } else {
+      this.first = 0;
+      this.middle = 1;
+      this.last = 2;
     }
   }
 
@@ -78,11 +89,13 @@ export class MainPageComponent implements OnInit {
       this.first = this.first - 1;
       this.middle = this.middle - 1;
       this.last = this.last - 1;
-      console.log(this.first, this.middle, this.last)
+    } else {
+      this.first = this.slides.length - 3;
+      this.middle = this.slides.length - 2;
+      this.last = this.slides.length - 1;
     }
   }
-  form: FormGroup;
-  routeParams;
+
   constructor(
     private _location: Location,
     private http: HttpClient,
@@ -112,9 +125,7 @@ export class MainPageComponent implements OnInit {
       )
       .subscribe((dealListResponse: any) => {
         console.log('dealListResponse ', dealListResponse);
-
         let dealListTotal = dealListResponse.total;
-
         this.http
           .post(
             this.url + 'crm.contact.list',
@@ -133,7 +144,6 @@ export class MainPageComponent implements OnInit {
             }
 
           });
-
       });
   }
 
@@ -143,7 +153,6 @@ export class MainPageComponent implements OnInit {
 
   addContact(dealListTotal) {
     const form = this.form.value;
-
     this.http
       .post(
         this.url + 'crm.contact.add',
@@ -176,7 +185,6 @@ export class MainPageComponent implements OnInit {
       )
       .subscribe((dealListResponse: any) => {
         console.log('dealListResponse ', dealListResponse);
-
         if (dealListResponse.result.length) {
           alert("Вы уже зарегестрировались")
         } else {
@@ -211,19 +219,8 @@ export class MainPageComponent implements OnInit {
               this.router.navigateByUrl('/thanks');
             });
         }
-
-
       });
-
   }
-
-  firstBlock: boolean = false;
-  secondBlock: boolean = false;
-  thirdBlock: boolean = false;
-  fourthBlock: boolean = false;
-  fifthBlock: boolean = false;
-  sixBlock: boolean = false;
-  seventhBlock: boolean = false;
 
   expand(idx: number) {
     switch (idx) {
@@ -256,22 +253,18 @@ export class MainPageComponent implements OnInit {
   goToURl(url) {
     window.open(url);
   }
+
   scrollTo(id): void {
-    console.log(id);
-    let yOffset;
-    if (id == 'forum-program' || id == 'div-about-forum') {
-      yOffset = -150;
+    let yOffSet;
+    if (window.innerWidth < 480) {
+      yOffSet = 40;
+    } else if (window.innerWidth < 786) {
+      yOffSet = 50;
     } else {
-      yOffset = -300;
+      yOffSet = 90;
     }
-
     const element = document.getElementById(id);
-    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    const y = element.getBoundingClientRect().top + window.pageYOffset - yOffSet;
     window.scrollTo({ top: y, behavior: 'smooth' });
-    // e.preventDefault();
-    // const targetElement = document.getElementById(id);
-    // console.log(targetElement);
-
-    // targetElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
   }
 }
