@@ -8,7 +8,7 @@
               <div class="w_wrap">
                 <p class="text_gen" (click)="scrollTo('div-about-guru')">О Гуру</p>
                 <p class="text_gen" (click)="scrollTo('div-about-program')">Программа</p>
-                <p class="text_gen" (click)="scrollTo('div-qa')">Вопросы и ответы</p>
+                <!-- <p class="text_gen" (click)="scrollTo('div-qa')">Вопросы и ответы</p> -->
                 <p class="text_gen" (click)="scrollTo('div-contacts')">Контакты</p>
               </div>
             </div>
@@ -163,29 +163,192 @@
                 <div (click)="expand(1)" class="text_multiple">
                   <img [ngClass]="firstBlock ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
                   <p class="dt_texts">30 августа -&nbsp;</p>
-                  <p class="te_gen">приезд Гуру, монахов и гостей в «Авадхута сиддха ашрам» в Омалур</p>
+                  <p class="te_gen"><span>приезд Гуру, монахов и гостей в «Авадхута сиддха ашрам»</span></p>
                 </div>
                 <div *ngIf="firstBlock" class="more_info">
                   <div class="text_wrapper">
                     <ul>
-                      <li class="te_gen">Празднование Ганеша-чатуртхи и Шрипада-джаянти!</li>
-                      <li class="te_gen">Хома (огненный ритуал) Ганеше или Даттатрейе</li>
-                      <li class="te_gen">Большой Символ Веры - Церемония вступления в
-                        Традицию Сатсанги Гуру</li>
-                      <li class="te_gen">1 сентября – День передачи Учения Сарасвати-хома,
-                        передачи в практики от Гуру и монахов</li>
-                      <li class="te_gen">Священный ритуал открытия Храма Свами Брахмананды!</li>
-                      <li class="te_gen">Семинар с Гуру свами Вишнудевананда Гири -
-                        «Блаженство энергии и Ясный Свет»</li>
-                      <li class="te_gen">Встреча с преданными свами Брахмананды</li>
-                      <li class="te_gen">Экскурсии по местным храмам переезд на море</li>
+                      <li class="te_gen">Заезд, размещение; заселение гостей в отели поблизости.</li>
                     </ul>
-                    <p class="te_gen wrap">КАЖДЫЙ ДЕНЬ!: медитации и практика на святом месте Маха-самадхи Свами
-                      Брахмананды на Холме Тигра.</p>
                   </div>
                   <div class="img_event_wrap">
                     <p class="gan_wrap">
-                      <img src="assets/Images/gan.png" alt="gan">
+                      <video autoplay loop muted playsinline src="assets/Images/1.mp4"></video>
+                      <!-- <img src="assets/Images/gan.png" alt="gan"> -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="plate_item">
+              <div class="pl_out-wrap">
+                <img class="rect" src="assets/Images/rect.png" alt="rect">
+                <div (click)="expand(2)" class="text_multiple">
+                  <img [ngClass]="secondBlock ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
+                  <p class="dt_texts">31 августа -&nbsp;</p>
+                  <p class="te_gen"></p>
+                </div>
+                <div *ngIf="secondBlock" class="more_info">
+                  <div class="text_wrapper">
+                    <ul>
+                      <li class="te_gen"></li>
+                    </ul>
+                  </div>
+                  <div class="img_event_wrap">
+                    <p class="gan_wrap">
+                      <video autoplay loop muted playsinline src="assets/Images/1.mp4"></video>
+                      <!-- <img src="assets/Images/gan.png" alt="gan"> -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="plate_item">
+              <div class="pl_out-wrap">
+                <img class="rect" src="assets/Images/rect.png" alt="rect">
+                <div (click)="expand(3)" class="text_multiple">
+                  <img [ngClass]="thirdBlock ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
+                  <p class="dt_texts">1 сентября -&nbsp;</p>
+                  <p class="te_gen"><span>День передачи Учения. Сарасвати-хома.</span></p>
+                </div>
+                <div *ngIf="thirdBlock" class="more_info">
+                  <div class="text_wrapper">
+                    <ul>
+                      <li class="te_gen">Огненный ритуал (хома) энергии Истинной Мудрости – Сарасвати.</li>
+                    </ul>
+                    <p class="te_gen wrap">САРАСВАТИ – Богиня Мудрости и речи, Вместилище духовных знаний, а так же
+                      искусств, наук, ремесел и мастерства, олицетворение эстетического разума. Это творческая энергия
+                      Бога-Творца и представляет могущество и интеллект, без которых невозможно упорядоченное творение.
+                      Призываем энергии Сарасвати для раскрытия мудрости, Истинного знания, ясности ума, творчества в
+                      нашем духовном Пути и материальной жизни!</p>
+                    <p class="te_gen wrap">Передачи в практики от Гуру, махантов, монахов.</p>
+                  </div>
+                  <div class="img_event_wrap">
+                    <p class="gan_wrap">
+                      <video autoplay loop muted playsinline src="assets/Images/1.mp4"></video>
+                      <!-- <img src="assets/Images/gan.png" alt="gan"> -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="plate_item">
+              <div class="pl_out-wrap">
+                <img class="rect" src="assets/Images/rect.png" alt="rect">
+                <div (click)="expand(4)" class="text_multiple">
+                  <img [ngClass]="fourthBlock ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
+                  <p class="dt_texts">2 сентября -&nbsp;</p>
+                  <p class="te_gen"><span>сакральный ритуал открытия Храма Свами Брахмананды.</span></p>
+                </div>
+                <div *ngIf="fourthBlock" class="more_info">
+                  <div class="text_wrapper">
+                    <ul>
+                      <li class="te_gen">Свами Брахмананда – парам гуру нашей школы, т.е. гуру нашего Гуру, наш
+                        “духовный дедушка”.</li>
+                    </ul>
+                    <p class="te_gen wrap">
+                      Открытие его храма является одной из главных причин этой поездки и важность этого события
+                      невозможно переоценить: будет открыто ещё одно место паломничества и прямого нисхождения
+                      просветляющей силы Ануграха шакти на Земле! Открытие храма - это огромный подарок, великая
+                      милость для людей, ниспосылаемая богами. Это мощное очищение кармы многих воплощений, это
+                      накопление благой кармы, ведущей душу к Освобождению от исконного неведения и страданий, это
+                      сильная поддержка души на Пути к Богу</p>
+                  </div>
+                  <div class="img_event_wrap">
+                    <p class="gan_wrap">
+                      <video autoplay loop muted playsinline src="assets/Images/1.mp4"></video>
+                      <!-- <img src="assets/Images/gan.png" alt="gan"> -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="plate_item">
+              <div class="pl_out-wrap">
+                <img class="rect" src="assets/Images/rect.png" alt="rect">
+                <div (click)="expand(5)" class="text_multiple double">
+                  <img [ngClass]="fifthBlock ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
+                  <p class="dt_texts">3 сентября -&nbsp;</p>
+                  <p class="te_gen"><span>встреча с преданными свами Брахмананды: Вену Гопалом,<br> Карпура Сундара Пандианом.</span>
+                  </p>
+                </div>
+                <div *ngIf="fifthBlock" class="more_info">
+                  <div class="text_wrapper">
+                    <ul>
+                      <li class="te_gen">Свами Брахмананда Шри Шива Прабхакара Сиддха Йоги Парамахамса – это
+                        величайший авадхута, ученик мастера традиции сиддхов – Шри Памбатти.</li>
+                    </ul>
+                    <p class="te_gen wrap">Свамиджи очень хорошо известен в индийском штате Керала, где имеет множество
+                      почитателей и свидетелей его чудес. Он жил под разными именами, не старея, много эпох во многих
+                      местах Индии: как на севере, так и на юге. Являясь мастером тайной техники паракайя-правешана,
+                      он неоднократно вселялся в тела различных людей.</p>
+                    <p class="te_gen wrap">Нам выпадет прекрасная возможность встретиться с его преданными, которые были
+                      свидетелями некоторых эпизодов жизни великого святого.</p>
+                  </div>
+                  <div class="img_event_wrap">
+                    <p class="gan_wrap">
+                      <video autoplay loop muted playsinline src="assets/Images/1.mp4"></video>
+                      <!-- <img src="assets/Images/gan.png" alt="gan"> -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="plate_item">
+              <div class="pl_out-wrap">
+                <img class="rect" src="assets/Images/rect.png" alt="rect">
+                <div (click)="expand(6)" class="text_multiple double">
+                  <img [ngClass]="sixBlock ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
+                  <p class="dt_texts">4-5 сентября -&nbsp;</p>
+                  <p class="te_gen"><span>семинар с Гуру Cвами Вишнудевананда Гири -<br> «Блаженство энергии и Ясный Свет».</span>
+                  </p>
+                </div>
+                <div *ngIf="sixBlock" class="more_info">
+                  <div class="text_wrapper">
+                    <p class="te_gen wrap">Прямые передачи в практики и бесценные наставления Мастера, усердно практикуя
+                      которые в дальнейшем, каждый сможет открыть блаженство энергии и Ясный Свет.</p>
+                  </div>
+                  <div class="img_event_wrap">
+                    <p class="gan_wrap">
+                      <video autoplay loop muted playsinline src="assets/Images/1.mp4"></video>
+                      <!-- <img src="assets/Images/gan.png" alt="gan"> -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="plate_item">
+              <div class="pl_out-wrap">
+                <img class="rect" src="assets/Images/rect.png" alt="rect">
+                <div (click)="expand(7)" class="text_multiple double">
+                  <img [ngClass]="seventhBlock ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
+                  <p class="dt_texts">6 сентября 12-00 -&nbsp;</p>
+                  <p class="te_gen"><span>окончание семинара, экскурсии по местным храмам<br>
+                    и переезд на океан в Варкалу.</span></p>
+                </div>
+                <div *ngIf="seventhBlock" class="more_info">
+                  <div class="text_wrapper">
+                    <p class="te_gen wrap">Экскурсии по местным храмам: Аранмула темпл и Ченганнур Махадева темпл:</p>
+                    <p class="te_gen wrap"><span>Аранмула темпл</span> - один из самых важных храмов Кришны в Керале и одна из пяти
+                      древних святынь в районе Ченганнур в Керале, связанная с легендой Махабхараты, где, как полагают,
+                      пять Пандавов построили по одному храму каждый; Аранмула построена принцем Пандавов Арджуной.
+                      Здесь хранится тханка анки, золотое одеяние Айяппана, подаренное королем Траванкора.
+                      Аранмула также известна гонками на змеиных лодках, которые проводятся каждый год во время Онама и
+                      связаны с легендами Махабхараты.</p>
+                    <p class="te_gen wrap"><span>Храм Ченганнур Махадевар</span> — один из старейших и известных храмов,
+                      расположенный
+                      в районе Алаппужа. Это обширный храмовый комплекс с круглым святилищем. Господь Шива и Парвати
+                      Деви
+                      являются главными украшениями этого храма. В отличие от других храмов, в этом храме есть две
+                      главные
+                      святыни. Главная святыня коническая, покрытая медью. Главный идол Деви сделан из сплава пяти
+                      металлов (ПАНЧАЛОГАМ). Шивалингам покрыт золотой пластиной с изображением Ардханаришвары — или
+                      Шива-Шакти, проявление Шивы.</p>
+                  </div>
+                  <div class="img_event_wrap">
+                    <p class="gan_wrap">
+                      <video autoplay loop muted playsinline src="assets/Images/1.mp4"></video>
+                      <!-- <img src="assets/Images/gan.png" alt="gan"> -->
                     </p>
                   </div>
                 </div>
@@ -194,31 +357,6 @@
           </div>
           <div class="g_wrap">
             <button class="btn_gen s tr">Оставить заявку на тур</button>
-          </div>
-          <div class="square">
-            <div>
-              <!-- <img style="float: right;" src="../../../assets/Images/1.mp4"
-                alt="Longtail boat in Thailand"> -->
-                <video autoplay loop muted playsinline src="../../../assets/Images/1.mp4"></video>
-            </div>
-            <p style="text-align: justify;">
-              How many times were you frustrated while looking
-              out for a good collection of programming/algorithm
-              /interview questions? What did you expect and what
-              did you get? This portal has been created to
-              provide well written, well thought and well
-              explained solutions for selected questions.
-              An IIT Roorkee alumnus and founder of GeeksforGeeks.
-              He loves to solve programming problems in most
-              efficient ways. Apart from GeeksforGeeks, he has
-              worked with DE Shaw and Co. as a software developer
-              and JIIT Noida as an assistant professor. It is a
-              good platform to learn programming. It is an
-              educational website. Prepare for the Recruitment
-              drive of product based companies like Microsoft,
-              Amazon, Adobe etc with a free online placement
-              preparation course.
-            </p>
           </div>
         </div>
         <div class="level_wrap">
@@ -239,10 +377,36 @@
           <div class="plates_wrap">
             <div class="plate_item">
               <div class="pl_out-wrap">
-                <img src="assets/Images/rect.png" alt="rect">
-                <div class="text_multiple">
-                  <p class="dt_texts"></p>
-                  <p class="te_gen"> </p>
+                <img class="rect" src="assets/Images/rect.png" alt="rect">
+                <div (click)="expand(3)" class="text_multiple">
+                  <img [ngClass]="thirdBlock ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
+                  <p class="dt_texts">1 сентября -&nbsp;</p>
+                  <p class="te_gen">День передачи Учения. Сарасвати-хома.</p>
+                </div>
+                <div *ngIf="thirdBlock" class="more_info">
+                  <div class="text_wrapper">
+                    <ul>
+                      <li class="te_gen">Празднование Ганеша-чатуртхи и Шрипада-джаянти!</li>
+                      <li class="te_gen">Хома (огненный ритуал) Ганеше или Даттатрейе</li>
+                      <li class="te_gen">Большой Символ Веры - Церемония вступления в
+                        Традицию Сатсанги Гуру</li>
+                      <li class="te_gen">1 сентября – День передачи Учения Сарасвати-хома,
+                        передачи в практики от Гуру и монахов</li>
+                      <li class="te_gen">Священный ритуал открытия Храма Свами Брахмананды!</li>
+                      <li class="te_gen">Семинар с Гуру свами Вишнудевананда Гири -
+                        «Блаженство энергии и Ясный Свет»</li>
+                      <li class="te_gen">Встреча с преданными свами Брахмананды</li>
+                      <li class="te_gen">Экскурсии по местным храмам переезд на море</li>
+                    </ul>
+                    <p class="te_gen wrap">КАЖДЫЙ ДЕНЬ!: медитации и практика на святом месте Маха-самадхи Свами
+                      Брахмананды на Холме Тигра.</p>
+                  </div>
+                  <div class="img_event_wrap">
+                    <p class="gan_wrap">
+                      <video autoplay loop muted playsinline src="assets/Images/1.mp4"></video>
+                      <!-- <img src="assets/Images/gan.png" alt="gan"> -->
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -270,10 +434,36 @@
           <div class="plates_wrap">
             <div class="plate_item">
               <div class="pl_out-wrap">
-                <img src="assets/Images/rect.png" alt="rect">
-                <div class="text_multiple">
-                  <p class="dt_texts"> </p>
-                  <p class="te_gen"> </p>
+                <img class="rect" src="assets/Images/rect.png" alt="rect">
+                <div (click)="expand(3)" class="text_multiple">
+                  <img [ngClass]="thirdBlock ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
+                  <p class="dt_texts">1 сентября -&nbsp;</p>
+                  <p class="te_gen">День передачи Учения. Сарасвати-хома.</p>
+                </div>
+                <div *ngIf="thirdBlock" class="more_info">
+                  <div class="text_wrapper">
+                    <ul>
+                      <li class="te_gen">Празднование Ганеша-чатуртхи и Шрипада-джаянти!</li>
+                      <li class="te_gen">Хома (огненный ритуал) Ганеше или Даттатрейе</li>
+                      <li class="te_gen">Большой Символ Веры - Церемония вступления в
+                        Традицию Сатсанги Гуру</li>
+                      <li class="te_gen">1 сентября – День передачи Учения Сарасвати-хома,
+                        передачи в практики от Гуру и монахов</li>
+                      <li class="te_gen">Священный ритуал открытия Храма Свами Брахмананды!</li>
+                      <li class="te_gen">Семинар с Гуру свами Вишнудевананда Гири -
+                        «Блаженство энергии и Ясный Свет»</li>
+                      <li class="te_gen">Встреча с преданными свами Брахмананды</li>
+                      <li class="te_gen">Экскурсии по местным храмам переезд на море</li>
+                    </ul>
+                    <p class="te_gen wrap">КАЖДЫЙ ДЕНЬ!: медитации и практика на святом месте Маха-самадхи Свами
+                      Брахмананды на Холме Тигра.</p>
+                  </div>
+                  <div class="img_event_wrap">
+                    <p class="gan_wrap">
+                      <video autoplay loop muted playsinline src="assets/Images/1.mp4"></video>
+                      <!-- <img src="assets/Images/gan.png" alt="gan"> -->
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

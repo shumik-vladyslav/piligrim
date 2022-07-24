@@ -111,28 +111,28 @@ export class MainPageComponent implements OnInit {
         {}
       )
       .subscribe((dealListResponse: any) => {
-        console.log('dealListResponse ' , dealListResponse);
+        console.log('dealListResponse ', dealListResponse);
 
         let dealListTotal = dealListResponse.total;
 
         this.http
-        .post(
-          this.url + 'crm.contact.list',
-          {
-            filter: { "PHONE": form.phone },
-            select: [ "ID", "NAME", "LAST_NAME" ]
-        },
-        )
-        .subscribe((contactListResponse: any) => {
-          console.log('contactListResponse ', contactListResponse);
+          .post(
+            this.url + 'crm.contact.list',
+            {
+              filter: { "PHONE": form.phone },
+              select: ["ID", "NAME", "LAST_NAME"]
+            },
+          )
+          .subscribe((contactListResponse: any) => {
+            console.log('contactListResponse ', contactListResponse);
 
-          if(contactListResponse.result.length) {
-            this.useContact(contactListResponse.result[0], dealListTotal);
-          } else {
-            this.addContact(dealListTotal);
-          }
+            if (contactListResponse.result.length) {
+              this.useContact(contactListResponse.result[0], dealListTotal);
+            } else {
+              this.addContact(dealListTotal);
+            }
 
-        });
+          });
 
       });
   }
@@ -145,79 +145,85 @@ export class MainPageComponent implements OnInit {
     const form = this.form.value;
 
     this.http
-    .post(
-      this.url + 'crm.contact.add',
-      {
-        fields: {
-          "NAME": form.name,
-          PHONE: [{ VALUE: form.phone, VALUE_TYPE: "WORK" }],
-          EMAIL: [{ VALUE: form.email, VALUE_TYPE: "HOME" }],
-          UTM_CAMPAIGN: this.routeParams?.utm_campaign,
-          UTM_MEDIUM: this.routeParams?.utm_medium,
-          UTM_SOURCE: this.routeParams?.utm_source,
-          UTM_TERM: this.routeParams?.utm_term,
-        },
-      }
-    )
-    .subscribe((contact: any) => {
-      console.log(contact);
-      this.addDeal(contact.result, dealListTotal);
-    });
-  }
-
-  addDeal(contactId, dealListTotal) {
-    this.http
-    .post(
-      this.url + 'crm.deal.list',
-      {
-        filter: { "CONTACT_ID": contactId, "SOURCE_DESCRIPTION": 'Поломничество в индию 2022' },
-        select: [ "*" ]
-    },
-    )
-    .subscribe((dealListResponse: any) => {
-      console.log('dealListResponse ', dealListResponse);
-
-      if(dealListResponse.result.length) {
-        alert("Вы уже зарегестрировались")
-      } else {
-
-      this.http
       .post(
-        this.url + 'crm.deal.add',
+        this.url + 'crm.contact.add',
         {
           fields: {
-            TITLE: `Заявка номер ${dealListTotal + 1}`,
-            CONTACT_ID: contactId,
-            STATUS: 'NEW',
-            OPENED: 'Y',
-            HAS_PHONE: 'Y',
-            HAS_EMAIL: 'Y',
-            STATUS_ID: 'NEW',
-            STATUS_DESCRIPTION: 'Новый',
-            SOURCE_ID: 'CALL',
-            SOURCE_DESCRIPTION: 'Поломничество в индию 2022',
-            SOURCE: 'Поломничество в индию 2022',
+            "NAME": form.name,
+            PHONE: [{ VALUE: form.phone, VALUE_TYPE: "WORK" }],
+            EMAIL: [{ VALUE: form.email, VALUE_TYPE: "HOME" }],
             UTM_CAMPAIGN: this.routeParams?.utm_campaign,
             UTM_MEDIUM: this.routeParams?.utm_medium,
             UTM_SOURCE: this.routeParams?.utm_source,
             UTM_TERM: this.routeParams?.utm_term,
-
           },
         }
       )
-      .subscribe((res) => {
-        console.log(res);
-        // this.router.navigate['/','thanks'];
-        this.router.navigateByUrl('/thanks');
+      .subscribe((contact: any) => {
+        console.log(contact);
+        this.addDeal(contact.result, dealListTotal);
       });
-      }
+  }
+
+  addDeal(contactId, dealListTotal) {
+    this.http
+      .post(
+        this.url + 'crm.deal.list',
+        {
+          filter: { "CONTACT_ID": contactId, "SOURCE_DESCRIPTION": 'Поломничество в индию 2022' },
+          select: ["*"]
+        },
+      )
+      .subscribe((dealListResponse: any) => {
+        console.log('dealListResponse ', dealListResponse);
+
+        if (dealListResponse.result.length) {
+          alert("Вы уже зарегестрировались")
+        } else {
+
+          this.http
+            .post(
+              this.url + 'crm.deal.add',
+              {
+                fields: {
+                  TITLE: `Заявка номер ${dealListTotal + 1}`,
+                  CONTACT_ID: contactId,
+                  STATUS: 'NEW',
+                  OPENED: 'Y',
+                  HAS_PHONE: 'Y',
+                  HAS_EMAIL: 'Y',
+                  STATUS_ID: 'NEW',
+                  STATUS_DESCRIPTION: 'Новый',
+                  SOURCE_ID: 'CALL',
+                  SOURCE_DESCRIPTION: 'Поломничество в индию 2022',
+                  SOURCE: 'Поломничество в индию 2022',
+                  UTM_CAMPAIGN: this.routeParams?.utm_campaign,
+                  UTM_MEDIUM: this.routeParams?.utm_medium,
+                  UTM_SOURCE: this.routeParams?.utm_source,
+                  UTM_TERM: this.routeParams?.utm_term,
+
+                },
+              }
+            )
+            .subscribe((res) => {
+              console.log(res);
+              // this.router.navigate['/','thanks'];
+              this.router.navigateByUrl('/thanks');
+            });
+        }
 
 
-    });
+      });
 
   }
 
   firstBlock: boolean = false;
+  secondBlock: boolean = false;
+  thirdBlock: boolean = false;
+  fourthBlock: boolean = false;
+  fifthBlock: boolean = false;
+  sixBlock: boolean = false;
+  seventhBlock: boolean = false;
 
   expand(idx: number) {
     switch (idx) {
@@ -225,7 +231,22 @@ export class MainPageComponent implements OnInit {
         this.firstBlock = !this.firstBlock;
         break;
       case 2:
-        this.firstBlock = !this.firstBlock;
+        this.secondBlock = !this.secondBlock;
+        break;
+      case 3:
+        this.thirdBlock = !this.thirdBlock;
+        break;
+      case 4:
+        this.fourthBlock = !this.fourthBlock;
+        break;
+      case 5:
+        this.fifthBlock = !this.fifthBlock;
+        break;
+      case 6:
+        this.sixBlock = !this.sixBlock;
+        break;
+      case 7:
+        this.seventhBlock = !this.seventhBlock;
         break;
       default:
         break;
