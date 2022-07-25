@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { emailValidator, phoneValidator } from 'src/app/services/validation.service';
 import { GeneralServiceService } from 'src/app/services/general-service.service';
+import { CountryISO, PhoneNumberFormat, SearchCountryField } from 'ngx-intl-tel-input';
 
 @Component({
   selector: 'app-main-page',
@@ -15,6 +16,12 @@ import { GeneralServiceService } from 'src/app/services/general-service.service'
 export class MainPageComponent implements OnInit {
   url = "https://b24-ay5iam.bitrix24.eu/rest/4/95igs0uaxwczeh83/";
   hasExpand = {};
+
+  separateDialCode = false;
+	SearchCountryField = SearchCountryField;
+	CountryISO = CountryISO;
+  PhoneNumberFormat = PhoneNumberFormat;
+	preferredCountries: CountryISO[] = [CountryISO.UnitedStates, CountryISO.UnitedKingdom];
 
   @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
     let header = document.querySelector('.head_wrap')
@@ -119,7 +126,14 @@ export class MainPageComponent implements OnInit {
       // this.language = res;
     })
   }
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.activatedRoute.queryParams.subscribe((params) => {
+      console.log(params);
+      this.routeParams = params;
+      // const userId = params['userId'];
+      // console.log(userId);
+    });
+  }
 
   sendRegistrationData() {
     const form = this.form.value;

@@ -18,7 +18,7 @@
     </div>
     <div class="head_content">
       <div>
-        <p class="main_title_text">Паломнический тур в Индию</p>
+        <p class="main_title_text">Паломничество в Индию</p>
         <p class="text_secondary">
           с просветлённым мастером традиции<br>
           сиддхов<span> и монахами по святым местам<br>
@@ -51,7 +51,7 @@
       <div class="bottom_section">
         <div class="buttons_wrap">
           <button (click)="scrollTo('apply')" class="btn_gen s">Оставить заявку</button>
-          <button (click)="scrollTo('about_program')" class="btn_gen">Программа тура</button>
+          <button (click)="scrollTo('about_program')" class="btn_gen">Программа</button>
         </div>
         <p class="lamp">
           <img src="assets/Images/lamp.png" alt="lamp">
@@ -155,7 +155,7 @@
   <div class="bl_height">
     <div id="about_program" class="wrapper">
       <div class="bh_wrapper">
-        <p class="m_top"><span></span>Этапы и программа тура<span class="f"></span></p>
+        <p class="m_top"><span></span>Этапы и программа<span class="f"></span></p>
         <div class="level_wrap">
           <div class="header_cont">
             <div class="num">
@@ -197,10 +197,10 @@
             <div class="plate_item">
               <div class="pl_out-wrap">
                 <img class="rect" src="assets/Images/rect.png" alt="rect">
-                <div (click)="expand(2)" class="text_multiple">
+                <div (click)="expand(2)" class="text_multiple double">
                   <img [ngClass]="hasExpand[2] ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
                   <p class="dt_texts">31 августа -&nbsp;</p>
-                  <p class="te_gen"><span>празднование Ганеша-чатуртхи и Шрипада-джаянти.
+                  <p class="te_gen"><span>празднование Ганеша-чатуртхи и Шрипада-джаянти. <br> Большой Символ Веры
                     </span></p>
                 </div>
                 <div *ngIf="hasExpand[2]" class="more_info">
@@ -316,7 +316,7 @@
                 <div (click)="expand(5)" class="text_multiple double">
                   <img [ngClass]="hasExpand[5] ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
                   <p class="dt_texts">3-6 сентября -&nbsp;</p>
-                  <p class="te_gen"><span>3-6 сентября – семинар с Гуру свами Вишнудевананда Гири <br> - «Блаженство
+                  <p class="te_gen"><span> семинар с Гуру свами Вишнудевананда Гири <br> - «Блаженство
                       энергии и Ясный Свет»</span>
                   </p>
                 </div>
@@ -615,7 +615,7 @@
   <div class="bl_second">
     <div class="wrapper">
       <div class="carousel_wrap">
-        <p class="m_top"><span></span>Фотогаллерея по туру<span class="f"></span></p>
+        <p class="m_top"><span></span>Фотогаллерея<span class="f"></span></p>
         <div class="tour_slide-wrap">
           <p (click)="previous()" class="arrow_w l">
             <img src="assets/Images/left.png" alt="arrow">
@@ -637,7 +637,7 @@
             <img src="assets/Images/right.png" alt="arrow">
           </p>
         </div>
-        <p class="gallery_t">Присоединиться к туру можно на любом из этапов!</p>
+        <p class="gallery_t">Присоединиться можно на любом из этапов!</p>
       </div>
     </div>
   </div>
@@ -654,6 +654,20 @@
           <input type="text" class="input-form-gold" placeholder="имя" formControlName="name" />
           <input type="email" class="input-form-gold" placeholder="email" formControlName="email" />
           <input type="text" class="input-form-gold" placeholder="телефон" formControlName="phone" />
+          <!-- <ngx-intl-tel-input
+          [cssClass]="'custom'"
+          [preferredCountries]="[CountryISO.UnitedStates, CountryISO.UnitedKingdom]"
+          [enableAutoCountrySelect]="false"
+          [enablePlaceholder]="true"
+          [searchCountryFlag]="true"
+          [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]"
+          [selectFirstCountry]="false"
+          [selectedCountryISO]="CountryISO.India"
+          [maxLength]="15"
+          [phoneValidation]="true"
+          name="phone"
+          formControlName="phone"
+        ></ngx-intl-tel-input> -->
         </div>
         <div class="registration-form-button flex justify-center items-center">
           <button class="btn_gen s reg" (click)="sendRegistrationData()" [disabled]="!form.valid"

@@ -23,7 +23,12 @@
     "@ngneat/tailwind": "^7.0.3",
     "@ngx-translate/core": "^13.0.0",
     "@ngx-translate/http-loader": "^6.0.0",
+    "bootstrap": "^4.5.3",
     "bx24-api": "^1.4.1",
+    "google-libphonenumber": "^3.2.29",
+    "intl-tel-input": "^17.0.3",
+    "ngx-bootstrap": "^7.1.2",
+    "ngx-intl-tel-input": "^3.2.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
