@@ -175,13 +175,13 @@ body {
 }
 .main_title_text {
   font-family: Archaic, sans-serif;
-  font-size: 92px;
+  font-size: 70px;
   color: #c9000b;
   line-height: 1;
   margin-bottom: 22px !important;
 }
 .text_secondary {
-  font-size: 47px;
+  font-size: 40px;
   color: #1b1919;
   font-weight: bold;
   font-family: "Georgia", sans-serif;
@@ -246,7 +246,7 @@ body {
   line-height: 1;
 }
 .bottom_section {
-  margin-top: 265px;
+  margin-top: 12vh;
   display: flex;
   justify-content: space-between;
 }
@@ -297,6 +297,7 @@ body {
   line-height: 1.1;
   text-align: center;
   white-space: nowrap;
+  margin-top: 40px !important;
 }
 .wrapper {
   max-width: 1920px;
@@ -310,7 +311,7 @@ body {
     background: url(./assets/Images/main_back.png);
     // background-size: cover;
     width: 100%;
-    height: 1076px;
+    height: 100vh;
     background-position-x: right;
     // height: 100vh;
   }
@@ -520,6 +521,10 @@ body {
   }
   &.left {
     width: 43%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 40px;
   }
 }
 .m_wrapper {
@@ -531,10 +536,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 30px;
 }
 .video_master {
   width: 730px;
-  height: 700px;
+  height: 420px;
   box-shadow: 0px 0px 15px #000;
   border-radius: 20px;
   margin: 50px 0px 10px 0px;
@@ -545,7 +551,7 @@ body {
   margin-top: 30px;
 }
 .m_name {
-  font-size: 38px;
+  font-size: 31px;
   color: #8c0000;
   font-weight: bold;
   font-family: "Georgia";
@@ -600,15 +606,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 80px;
+  font-size: 55px;
   font-weight: 500;
   line-height: 1;
   color: #8c0000;
   font-family: "Georgia";
   text-align: center;
-  &.f {
-    margin-left: -105px !important;
-  }
   span {
     display: block;
     width: 22px;
@@ -696,15 +699,17 @@ body {
 }
 .more {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   font-size: 25px;
   color: #1a171b;
   font-family: "Georgia";
   line-height: 1;
   margin-right: 30px !important;
+  margin-bottom: 6px !important;
   cursor: pointer;
   img {
-    margin-right: 30px;
+    height: 35px;
+    margin-right: 15px;
   }
 }
 .divider {
@@ -720,6 +725,13 @@ body {
   align-items: center;
   margin-top: 48px;
 }
+// .bottom_social {
+//   display: flex;
+//   flex-direction: column;
+//   margin-top: -65px;
+//   width: 480px;
+//   margin-left: auto;
+// }
 .b-im_wrap {
   margin-right: 21px !important;
 }
@@ -733,6 +745,9 @@ body {
     background-color: #fff;
     box-shadow: 0px 1px 7px black;
   }
+}
+.soc_w {
+  display: flex;
 }
 .disabled {
   opacity: 0.4;
@@ -812,6 +827,15 @@ body {
     }
   }
 }
+@media (max-width: 1910px) {
+  .soc_w {
+    flex-direction: column;
+  }
+  .bottom_social {
+    margin-top: -30px;
+    margin-left: auto;
+  }
+}
 @media (max-width: 1880px) {
   .event_dates {
     left: 40%;
@@ -823,7 +847,7 @@ body {
     font-size: 26px;
   }
   .list_items {
-    margin-top: 110px;
+    margin-top: 165px;
   }
   .bottom_section {
     margin-top: 210px;
@@ -840,7 +864,7 @@ body {
 @media (max-width: 1765px) {
   .event_dates {
     left: 36%;
-    margin-top: 11px !important;
+    margin-top: 60px !important;
   }
   .main_title_text {
     margin-bottom: 5px !important;
@@ -873,6 +897,9 @@ body {
   }
 }
 @media (max-width: 1650px) {
+  .bottom_social {
+    margin-top: 0px;
+  }
   .event_dates {
     left: 34%;
   }
@@ -884,6 +911,9 @@ body {
   }
 }
 @media (max-width: 1605px) {
+  .bottom_social {
+    margin-top: 30px;
+  }
   .about_master.sc .about_m {
     font-size: 24px;
   }
@@ -912,6 +942,9 @@ body {
   }
 }
 @media (max-width: 1555px) {
+  .bottom_social {
+    margin-top: 0px;
+  }
   .m_name {
     font-size: 25px;
   }
@@ -930,6 +963,9 @@ body {
   }
 }
 @media (max-width: 1590px) {
+  .m_top.f {
+    font-size: 45px;
+  }
   .event_dates {
     left: 31%;
   }
@@ -985,7 +1021,7 @@ body {
   }
   .video_master {
     width: auto;
-    height: 500px;
+    height: 300px;
   }
   .btn_gen {
     width: 300px;
@@ -1019,6 +1055,13 @@ body {
   }
 }
 @media (max-width: 1360px) {
+  .bottom_social {
+    margin-top: 10px;
+  }
+  .video_master {
+    margin: 10px 0px 10px 0px;
+    height: 260px;
+  }
   .text_multiple.double {
     top: 12px;
   }
@@ -1086,6 +1129,12 @@ body {
   }
 }
 @media (max-width: 1200px) {
+  .img-w {
+    display: none;
+  }
+  .video_master {
+    height: 480px;
+  }
   .more_info {
     padding: 30px 0px 0px 0px !important;
     margin: 0;
@@ -1158,6 +1207,7 @@ body {
   }
   .block_master.left {
     width: 100%;
+    margin-top: 0;
   }
   .block_master.right {
     margin-top: 20px;
@@ -1181,7 +1231,8 @@ body {
     font-size: 22px;
   }
   .bottom_social {
-    flex-direction: column;
+    margin-top: 30px;
+    // flex-direction: column;
     p {
       margin-bottom: 15px !important;
     }
@@ -1385,6 +1436,12 @@ body {
   }
 }
 @media (max-width: 786px) {
+  .bottom_social {
+    flex-direction: column;
+  }
+  .video_master {
+    height: 310px;
+  }
   .m_top {
     font-size: 42px;
   }
@@ -1433,6 +1490,11 @@ body {
   }
 }
 @media (max-width: 690px) {
+  .block_master {
+    .m_top span {
+      display: none;
+    }
+  }
   .dt_wrap img {
     margin-top: 4px;
     height: 47px;
@@ -1531,6 +1593,16 @@ body {
   .wrapper {
     padding: 0px 10px;
   }
+  .wrapper.main {
+    background-position-x: 77%;
+    background-size: 1313px;
+  }
+  .event_dates.no_mob {
+    font-size: 25px;
+  }
+  .list_text {
+    max-width: 50%;
+  }
   .video_master {
     height: 320px;
   }
@@ -1568,6 +1640,9 @@ body {
   }
 }
 @media (max-width: 550px) {
+  .text_secondary {
+    max-width: 80%;
+  }
   .head_in {
     padding: 0 20px;
   }
@@ -1636,6 +1711,9 @@ body {
   .divider_form {
     margin: 15px 0 !important;
   }
+  .bottom_section {
+    margin-top: -20px;
+  }
   .n_sl.last_sl {
     width: 15%;
     height: 100px;
@@ -1663,6 +1741,7 @@ body {
   }
   .m_top.f {
     margin-left: 0px !important;
+    font-size: 30px;
   }
   .about_master.sc .about_m {
     font-size: 16px;
@@ -1680,6 +1759,9 @@ body {
 @media (max-width: 480px) {
   .list-item {
     margin-bottom: 10px;
+  }
+  .bottom_section {
+    margin-top: 20px !important;
   }
   .m_top {
     font-size: 24px;
@@ -1731,7 +1813,19 @@ body {
     margin-top: 45px !important;
   }
 }
+@media (max-width: 450px) {
+  .g_title {
+    margin-top: 5px !important;
+  }
+  .wrapper.main {
+    height: 776px;
+    background-size: 1448px;
+  }
+}
 @media (max-width: 380px) {
+  .video_master {
+    height: 179px;
+  }
   .text_gen {
     font-size: 16px;
   }

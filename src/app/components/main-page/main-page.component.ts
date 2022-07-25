@@ -215,7 +215,6 @@ export class MainPageComponent implements OnInit {
             )
             .subscribe((res) => {
               console.log(res);
-              // this.router.navigate['/','thanks'];
               this.router.navigateByUrl('/thanks');
             });
         }

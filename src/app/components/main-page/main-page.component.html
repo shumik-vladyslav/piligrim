@@ -67,16 +67,37 @@
       <div class="m_wrapper">
         <div class="s_wrap">
           <div class="block_master left">
-            <div class="m_title">
+            <!-- <div class="m_title">
               <p class="m_top f"><span></span> Знакомство</p>
               <p class="m_top"> с мастером <span class="f"></span></p>
-            </div>
+            </div> -->
             <div class="video_master">
               <iframe width="100%" height="100%" src="https://www.youtube.com/embed/cOQHsiHk7MU" frameborder="0"
                 allowfullscreen class="item-iframe"></iframe>
             </div>
+            <div class="about_master">
+              <p class="divider">
+                <img src="assets/Images/figure_.png" alt="divider">
+              </p>
+              <p class="ab_pilgrim">
+                "Паломничество – это отражение в земном мире духовного пути. Снаружи мы идём в паломничество. Внутри –
+                мы
+                идём
+                к
+                Богу. Мы едем контактировать с высокими божественными существами. Мы едем очищать себя, открывать свою
+                душу.
+                Мы
+                едем получать благословения на будущую жизнь, на то, что меняет нашу жизнь."
+              </p>
+              <p class="divider">
+                <img src="assets/Images/figure_.png" alt="divider">
+              </p>
+            </div>
           </div>
           <div class="block_master right">
+            <div class="m_title">
+              <p class="m_top f"><span></span> Знакомство с мастером <span class="f"></span></p>
+            </div>
             <div class="about_master">
               <p class="m_name">
                 Шротрия Брахмаништха Анант<br>
@@ -111,29 +132,23 @@
               <p class="divider">
                 <img src="assets/Images/figure_.png" alt="divider">
               </p>
-              <p class="ab_pilgrim">
-                "Паломничество – это отражение в земном мире духовного пути. Снаружи мы идём в паломничество. Внутри –
-                мы
-                идём
-                к
-                Богу. Мы едем контактировать с высокими божественными существами. Мы едем очищать себя, открывать свою
-                душу.
-                Мы
-                едем получать благословения на будущую жизнь, на то, что меняет нашу жизнь."
-              </p>
-              <p class="divider">
-                <img src="assets/Images/figure_.png" alt="divider">
-              </p>
             </div>
             <p class="m_nama">Свами Вишнудевананда Гири</p>
           </div>
         </div>
         <div class="bottom_social">
           <p class="more">Больше информации на страницах:</p>
-          <p (click)="goToURl('https://instagram.com/swami_vishnudevananda_giri')"  class="more"><img class="soc_l" src="assets/Images/insta.png" alt="instagram"> swami_vishnudevananda_giri
-          </p>
-          <p (click)="goToURl('https://t.me/swami_vishnudevananda_giri')"  class="more"><img class="soc_l" src="assets/Images/telega.png" alt="telegram"> swami_vishnudevananda_giri
-          </p>
+          <div class="soc_w">
+            <p (click)="goToURl('https://instagram.com/swami_vishnudevananda_giri')" class="more"><img class="soc_l"
+                src="assets/Images/insta.png" alt="instagram"> swami_vishnudevananda_giri
+            </p>
+            <p (click)="goToURl('https://t.me/swami_vishnudevananda_giri')" class="more"><img class="soc_l"
+                src="assets/Images/telega.png" alt="telegram"> swami_vishnudevananda_giri
+            </p>
+            <p (click)="goToURl('https://www.youtube.com/c/СвамиВишнудеванандагири')" class="more"><img class="soc_l"
+                src="assets/Images/yt.png" alt="tube"> Свами Вишнудевананда Гири
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -269,7 +284,8 @@
                 <div (click)="expand(5)" class="text_multiple double">
                   <img [ngClass]="fifthBlock ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
                   <p class="dt_texts">3 сентября -&nbsp;</p>
-                  <p class="te_gen"><span>встреча с преданными свами Брахмананды: Вену Гопалом,<br> Карпура Сундара Пандианом.</span>
+                  <p class="te_gen"><span>встреча с преданными свами Брахмананды: Вену Гопалом,<br> Карпура Сундара
+                      Пандианом.</span>
                   </p>
                 </div>
                 <div *ngIf="fifthBlock" class="more_info">
@@ -300,7 +316,8 @@
                 <div (click)="expand(6)" class="text_multiple double">
                   <img [ngClass]="sixBlock ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
                   <p class="dt_texts">4-5 сентября -&nbsp;</p>
-                  <p class="te_gen"><span>семинар с Гуру Cвами Вишнудевананда Гири -<br> «Блаженство энергии и Ясный Свет».</span>
+                  <p class="te_gen"><span>семинар с Гуру Cвами Вишнудевананда Гири -<br> «Блаженство энергии и Ясный
+                      Свет».</span>
                   </p>
                 </div>
                 <div *ngIf="sixBlock" class="more_info">
@@ -324,12 +341,13 @@
                   <img [ngClass]="seventhBlock ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
                   <p class="dt_texts">6 сентября 12-00 -&nbsp;</p>
                   <p class="te_gen"><span>окончание семинара, экскурсии по местным храмам<br>
-                    и переезд на океан в Варкалу.</span></p>
+                      и переезд на океан в Варкалу.</span></p>
                 </div>
                 <div *ngIf="seventhBlock" class="more_info">
                   <div class="text_wrapper">
                     <p class="te_gen wrap">Экскурсии по местным храмам: Аранмула темпл и Ченганнур Махадева темпл:</p>
-                    <p class="te_gen wrap"><span>Аранмула темпл</span> - один из самых важных храмов Кришны в Керале и одна из пяти
+                    <p class="te_gen wrap"><span>Аранмула темпл</span> - один из самых важных храмов Кришны в Керале и
+                      одна из пяти
                       древних святынь в районе Ченганнур в Керале, связанная с легендой Махабхараты, где, как полагают,
                       пять Пандавов построили по одному храму каждый; Аранмула построена принцем Пандавов Арджуной.
                       Здесь хранится тханка анки, золотое одеяние Айяппана, подаренное королем Траванкора.
