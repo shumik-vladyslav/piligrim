@@ -14,13 +14,7 @@ import { GeneralServiceService } from 'src/app/services/general-service.service'
 
 export class MainPageComponent implements OnInit {
   url = "https://b24-ay5iam.bitrix24.eu/rest/4/95igs0uaxwczeh83/";
-  firstBlock: boolean = false;
-  secondBlock: boolean = false;
-  thirdBlock: boolean = false;
-  fourthBlock: boolean = false;
-  fifthBlock: boolean = false;
-  sixBlock: boolean = false;
-  seventhBlock: boolean = false;
+  hasExpand = {};
 
   @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
     let header = document.querySelector('.head_wrap')
@@ -48,27 +42,39 @@ export class MainPageComponent implements OnInit {
     },
     {
       index: 3,
-      path: 'assets/Images/slide1.png',
+      path: 'assets/Images/slide4.jpg',
     },
     {
       index: 4,
-      path: 'assets/Images/slide2.png',
+      path: 'assets/Images/slide5.jpg',
     },
     {
       index: 5,
-      path: 'assets/Images/slide3.png',
+      path: 'assets/Images/slide6.jpg',
     },
     {
       index: 6,
-      path: 'assets/Images/slide1.png',
+      path: 'assets/Images/slide7.jpg',
     },
     {
       index: 7,
-      path: 'assets/Images/slide2.png',
+      path: 'assets/Images/slide8.jpg',
     },
     {
       index: 8,
-      path: 'assets/Images/slide3.png',
+      path: 'assets/Images/slide9.jpg',
+    },
+    {
+      index: 9,
+      path: 'assets/Images/slide10.jpg',
+    },
+    {
+      index: 10,
+      path: 'assets/Images/slide11.jpg',
+    },
+    {
+      index: 11,
+      path: 'assets/Images/slide12.jpg',
     }
   ]
 
@@ -220,8 +226,6 @@ export class MainPageComponent implements OnInit {
         }
       });
   }
-
-  hasExpand = {};
 
   expand(idx: number) {
     this.hasExpand[idx] = !this.hasExpand[idx];
