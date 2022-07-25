@@ -130,7 +130,7 @@ export class MainPageComponent implements OnInit {
           .post(
             this.url + 'crm.contact.list',
             {
-              filter: { "PHONE": form.phone },
+              filter: { "EMAIL": form.email },
               select: ["ID", "NAME", "LAST_NAME"]
             },
           )
@@ -179,7 +179,7 @@ export class MainPageComponent implements OnInit {
       .post(
         this.url + 'crm.deal.list',
         {
-          filter: { "CONTACT_ID": contactId, "SOURCE_DESCRIPTION": 'Поломничество в индию 2022' },
+          filter: { "CONTACT_ID": contactId, "SOURCE_DESCRIPTION": 'Лендинг Тур с Гуру' },
           select: ["*"]
         },
       )
@@ -202,9 +202,9 @@ export class MainPageComponent implements OnInit {
                   HAS_EMAIL: 'Y',
                   STATUS_ID: 'NEW',
                   STATUS_DESCRIPTION: 'Новый',
-                  SOURCE_ID: 'CALL',
-                  SOURCE_DESCRIPTION: 'Поломничество в индию 2022',
-                  SOURCE: 'Поломничество в индию 2022',
+                  SOURCE_ID: 'CALL1',
+                  SOURCE_DESCRIPTION: 'Лендинг Тур с Гуру',
+                  SOURCE: 'Лендинг Тур с Гуру',
                   UTM_CAMPAIGN: this.routeParams?.utm_campaign,
                   UTM_MEDIUM: this.routeParams?.utm_medium,
                   UTM_SOURCE: this.routeParams?.utm_source,
