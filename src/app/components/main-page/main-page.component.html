@@ -175,11 +175,11 @@
               <div class="pl_out-wrap">
                 <img class="rect" src="assets/Images/rect.png" alt="rect">
                 <div (click)="expand(1)" class="text_multiple">
-                  <img [ngClass]="firstBlock ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
+                  <img [ngClass]="hasExpand[1] ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
                   <p class="dt_texts">30 августа -&nbsp;</p>
                   <p class="te_gen"><span>приезд Гуру, монахов и гостей в «Авадхута сиддха ашрам»</span></p>
                 </div>
-                <div *ngIf="firstBlock" class="more_info">
+                <div *ngIf="hasExpand[1]" class="more_info">
                   <div class="text_wrapper">
                     <ul>
                       <li class="te_gen">Заезд, размещение; заселение гостей в отели поблизости.</li>
@@ -187,7 +187,7 @@
                   </div>
                   <div class="img_event_wrap">
                     <p class="gan_wrap">
-                      <video autoplay loop muted playsinline src="assets/Images/1.mp4"></video>
+                      <video autoplay loop muted playsinline src="assets/gif/30aug.mp4"></video>
                       <!-- <img src="assets/Images/gan.png" alt="gan"> -->
                     </p>
                   </div>
@@ -198,19 +198,29 @@
               <div class="pl_out-wrap">
                 <img class="rect" src="assets/Images/rect.png" alt="rect">
                 <div (click)="expand(2)" class="text_multiple">
-                  <img [ngClass]="secondBlock ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
+                  <img [ngClass]="hasExpand[2] ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
                   <p class="dt_texts">31 августа -&nbsp;</p>
-                  <p class="te_gen"></p>
+                  <p class="te_gen"><span>празднование Ганеша-чатуртхи и Шрипада-джаянти.
+                    </span></p>
                 </div>
-                <div *ngIf="secondBlock" class="more_info">
+                <div *ngIf="hasExpand[2]" class="more_info">
                   <div class="text_wrapper">
                     <ul>
-                      <li class="te_gen"></li>
+                      <li class="te_gen">Вместе с Гуру мы проведем хому (огненный ритуал) Ганеше</li>
+                      <li class="te_gen">Ганеша – это божество, олицетворяющее мощную энергию Муладхара-чакры, которая, пробуждаясь, сметает все сомнения и препятствия нашей жизни. Это также божество ананды – радости и счастья, которые являются истинной природой нашей души. Призываем энергии Ганеши для устранения препятствий на пути к духовному развитию и материальному благополучию.</li>
+                      <li class="te_gen">В этот день отмечается так же день явления аватара Господа Даттатрейи в эту Кали югу - Шрипада Шри Валабхи! В двойной праздник сила благословений святых удваивается! Проведение огненных ритуалов также дарует бесчисленные благословения и заслуги! И мы будет посвящать их благу всех живых существ.</li>
+                      <li class="te_gen">И в этот дважды благословенный день в этом году проводится инициация БОЛЬШОГО СИМВОЛА ВЕРЫ.
+                        Самое главное событие в жизни человека – это принятие веры, духовного пути и школы. Эта инициация откроет врата в Дхарму всем начинающим духовным искателям. Принимая Символ Веры, мы устанавливаем связь с божествами традиции, святыми и высказываем свое намерение преданности, любви к Богу и святым. Это меняет линию судьбы, направляя ее на путь духовного совершенствования и Истины.
+                        Большой Символ Веры можно пройти повторно для обновления, укрепления и очищения самайной связи.
+                        </li>
+                      <li class="te_gen">Ежедневные Сатсанги Гуру свами Вишнудевананда Гири.
+                        «Какова бы ни была цена, как бы трудно это ни было, какие бы препятствия ни возникали, никогда не пренебрегай обществом мудрых. Только сатсанг освещает дорогу жизни. Сатсанг превыше всех других видов религиозной практики: благотворительности, аскетизма, посещений святынь и исполнения ритуалов.» («Йога Васиштха»)
+                        </li>
                     </ul>
                   </div>
                   <div class="img_event_wrap">
                     <p class="gan_wrap">
-                      <video autoplay loop muted playsinline src="assets/Images/1.mp4"></video>
+                      <video autoplay loop muted playsinline src="assets/gif/31aug.mp4"></video>
                       <!-- <img src="assets/Images/gan.png" alt="gan"> -->
                     </p>
                   </div>
@@ -221,25 +231,29 @@
               <div class="pl_out-wrap">
                 <img class="rect" src="assets/Images/rect.png" alt="rect">
                 <div (click)="expand(3)" class="text_multiple">
-                  <img [ngClass]="thirdBlock ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
+                  <img [ngClass]="hasExpand[3] ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
                   <p class="dt_texts">1 сентября -&nbsp;</p>
                   <p class="te_gen"><span>День передачи Учения. Сарасвати-хома.</span></p>
                 </div>
-                <div *ngIf="thirdBlock" class="more_info">
+                <div *ngIf="hasExpand[3]" class="more_info">
                   <div class="text_wrapper">
                     <ul>
-                      <li class="te_gen">Огненный ритуал (хома) энергии Истинной Мудрости – Сарасвати.</li>
+                      <li class="te_gen">Огненный ритуал (хома) энергии Истинной Мудрости – Сарасвати.
+                        САРАСВАТИ – Богиня Мудрости и речи, Вместилище духовных знаний, а так же искусств, наук, ремесел и мастерства, олицетворение эстетического разума. Это творческая энергия Бога-Творца и представляет могущество и интеллект, без которых невозможно упорядоченное творение.
+                        </li>
+                      <li class="te_gen">Призываем энергии Сарасвати для раскрытия мудрости, Истинного знания, ясности ума, творчества в нашем духовном Пути и материальной жизни!</li>
+                      <li class="te_gen">Традиционно в этот день состоятся передачи в практики от Гуру, махантов и  монахов.</li>
                     </ul>
-                    <p class="te_gen wrap">САРАСВАТИ – Богиня Мудрости и речи, Вместилище духовных знаний, а так же
+                    <!-- <p class="te_gen wrap">САРАСВАТИ – Богиня Мудрости и речи, Вместилище духовных знаний, а так же
                       искусств, наук, ремесел и мастерства, олицетворение эстетического разума. Это творческая энергия
                       Бога-Творца и представляет могущество и интеллект, без которых невозможно упорядоченное творение.
                       Призываем энергии Сарасвати для раскрытия мудрости, Истинного знания, ясности ума, творчества в
                       нашем духовном Пути и материальной жизни!</p>
-                    <p class="te_gen wrap">Передачи в практики от Гуру, махантов, монахов.</p>
+                    <p class="te_gen wrap">Передачи в практики от Гуру, махантов, монахов.</p> -->
                   </div>
                   <div class="img_event_wrap">
                     <p class="gan_wrap">
-                      <video autoplay loop muted playsinline src="assets/Images/1.mp4"></video>
+                      <video autoplay loop muted playsinline src="assets/gif/1sep.mp4"></video>
                       <!-- <img src="assets/Images/gan.png" alt="gan"> -->
                     </p>
                   </div>
@@ -250,27 +264,21 @@
               <div class="pl_out-wrap">
                 <img class="rect" src="assets/Images/rect.png" alt="rect">
                 <div (click)="expand(4)" class="text_multiple">
-                  <img [ngClass]="fourthBlock ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
+                  <img [ngClass]="hasExpand[4] ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
                   <p class="dt_texts">2 сентября -&nbsp;</p>
                   <p class="te_gen"><span>сакральный ритуал открытия Храма Свами Брахмананды.</span></p>
                 </div>
-                <div *ngIf="fourthBlock" class="more_info">
+                <div *ngIf="hasExpand[4]" class="more_info">
                   <div class="text_wrapper">
                     <ul>
-                      <li class="te_gen">Свами Брахмананда – парам гуру нашей школы, т.е. гуру нашего Гуру, наш
-                        “духовный дедушка”.</li>
+                      <li class="te_gen">СВАМИ БРАХМАНАНДА ШРИ ШИВА ПРАБХАКАРА СИДДХА ЙОГИ ПАРАМАХАМСА – парамгуру нашей школы, т.е. гуру нашего Гуру, наш “духовный дедушка”.</li>
                     </ul>
                     <p class="te_gen wrap">
-                      Открытие его храма является одной из главных причин этой поездки и важность этого события
-                      невозможно переоценить: будет открыто ещё одно место паломничества и прямого нисхождения
-                      просветляющей силы Ануграха шакти на Земле! Открытие храма - это огромный подарок, великая
-                      милость для людей, ниспосылаемая богами. Это мощное очищение кармы многих воплощений, это
-                      накопление благой кармы, ведущей душу к Освобождению от исконного неведения и страданий, это
-                      сильная поддержка души на Пути к Богу</p>
+                      Открытие его храма является одной из главных причин этой поездки и важность этого события невозможно переоценить: будет открыто ещё одно место паломничества и прямого нисхождения просветляющей силы Ануграха шакти на Земле! Открытие храма - это огромный подарок, великая милость для людей, ниспосылаемая богами. Это мощное очищение кармы многих воплощений, это накопление благой кармы, ведущей душу к Освобождению от исконного неведения и страданий, это сильная поддержка души на Пути к Богу. И даже одно лишь присутствие на подобных священных действах - огромное благословение и накопление духовных заслуг!</p>
                   </div>
                   <div class="img_event_wrap">
                     <p class="gan_wrap">
-                      <video autoplay loop muted playsinline src="assets/Images/1.mp4"></video>
+                      <video autoplay loop muted playsinline src="assets/gif/2sep.mp4"></video>
                       <!-- <img src="assets/Images/gan.png" alt="gan"> -->
                     </p>
                   </div>
@@ -281,13 +289,37 @@
               <div class="pl_out-wrap">
                 <img class="rect" src="assets/Images/rect.png" alt="rect">
                 <div (click)="expand(5)" class="text_multiple double">
-                  <img [ngClass]="fifthBlock ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
+                  <img [ngClass]="hasExpand[5] ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
+                  <p class="dt_texts">3-6 сентября -&nbsp;</p>
+                  <p class="te_gen"><span>3-6 сентября – семинар с Гуру свами Вишнудевананда Гири <br> - «Блаженство энергии и Ясный Свет»</span>
+                  </p>
+                </div>
+                <div *ngIf="hasExpand[5]" class="more_info">
+                  <div class="text_wrapper">
+                    <ul>
+                      <li class="te_gen">Уникальная возможность получить прямые передачи в глубокие практики и бесценные наставления Мастера в традиции Ануттара-тантры сиддхов, усердно практикуя которые в дальнейшем, каждый сможет открыть блаженство энергии и Ясный Свет.</li>
+                    </ul>
+                  </div>
+                  <div class="img_event_wrap">
+                    <p class="gan_wrap">
+                      <video autoplay loop muted playsinline src="assets/gif/3-6sep.mp4"></video>
+                      <!-- <img src="assets/Images/gan.png" alt="gan"> -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="plate_item">
+              <div class="pl_out-wrap">
+                <img class="rect" src="assets/Images/rect.png" alt="rect">
+                <div (click)="expand(6)" class="text_multiple double">
+                  <img [ngClass]="hasExpand[6] ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
                   <p class="dt_texts">3 сентября -&nbsp;</p>
                   <p class="te_gen"><span>встреча с преданными свами Брахмананды: Вену Гопалом,<br> Карпура Сундара
                       Пандианом.</span>
                   </p>
                 </div>
-                <div *ngIf="fifthBlock" class="more_info">
+                <div *ngIf="hasExpand[6]" class="more_info">
                   <div class="text_wrapper">
                     <ul>
                       <li class="te_gen">Свами Брахмананда Шри Шива Прабхакара Сиддха Йоги Парамахамса – это
@@ -302,31 +334,7 @@
                   </div>
                   <div class="img_event_wrap">
                     <p class="gan_wrap">
-                      <video autoplay loop muted playsinline src="assets/Images/1.mp4"></video>
-                      <!-- <img src="assets/Images/gan.png" alt="gan"> -->
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="plate_item">
-              <div class="pl_out-wrap">
-                <img class="rect" src="assets/Images/rect.png" alt="rect">
-                <div (click)="expand(6)" class="text_multiple double">
-                  <img [ngClass]="sixBlock ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
-                  <p class="dt_texts">4-5 сентября -&nbsp;</p>
-                  <p class="te_gen"><span>семинар с Гуру Cвами Вишнудевананда Гири -<br> «Блаженство энергии и Ясный
-                      Свет».</span>
-                  </p>
-                </div>
-                <div *ngIf="sixBlock" class="more_info">
-                  <div class="text_wrapper">
-                    <p class="te_gen wrap">Прямые передачи в практики и бесценные наставления Мастера, усердно практикуя
-                      которые в дальнейшем, каждый сможет открыть блаженство энергии и Ясный Свет.</p>
-                  </div>
-                  <div class="img_event_wrap">
-                    <p class="gan_wrap">
-                      <video autoplay loop muted playsinline src="assets/Images/1.mp4"></video>
+                      <video autoplay loop muted playsinline src="assets/gif/3sep.mp4"></video>
                       <!-- <img src="assets/Images/gan.png" alt="gan"> -->
                     </p>
                   </div>
@@ -337,12 +345,12 @@
               <div class="pl_out-wrap">
                 <img class="rect" src="assets/Images/rect.png" alt="rect">
                 <div (click)="expand(7)" class="text_multiple double">
-                  <img [ngClass]="seventhBlock ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
+                  <img [ngClass]="hasExpand[7] ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
                   <p class="dt_texts">6 сентября 12-00 -&nbsp;</p>
                   <p class="te_gen"><span>окончание семинара, экскурсии по местным храмам<br>
                       и переезд на океан в Варкалу.</span></p>
                 </div>
-                <div *ngIf="seventhBlock" class="more_info">
+                <div *ngIf="hasExpand[7]" class="more_info">
                   <div class="text_wrapper">
                     <p class="te_gen wrap">Экскурсии по местным храмам: Аранмула темпл и Ченганнур Махадева темпл:</p>
                     <p class="te_gen wrap"><span>Аранмула темпл</span> - один из самых важных храмов Кришны в Керале и
@@ -364,7 +372,7 @@
                   </div>
                   <div class="img_event_wrap">
                     <p class="gan_wrap">
-                      <video autoplay loop muted playsinline src="assets/Images/1.mp4"></video>
+                      <video autoplay loop muted playsinline src="assets/gif/6sep.mp4"></video>
                       <!-- <img src="assets/Images/gan.png" alt="gan"> -->
                     </p>
                   </div>
@@ -383,8 +391,8 @@
               <p class="lv">этап</p>
             </div>
             <div class="h_cont">
-              <p class="txt_pl">ВАРКАЛА (берег моря) -
-                Инициации - наречение духовным именем</p>
+              <p class="txt_pl">ВАРКАЛА (берег океана) -
+                ИНИЦИАЦИИ, ДИКША - наречение духовным именем</p>
               <div class="dt_wrap">
                 <img src="assets/Images/cald.png" alt="wrap">
                 <p class="dt_txt">6 - 10 сентября</p>
@@ -395,32 +403,98 @@
             <div class="plate_item">
               <div class="pl_out-wrap">
                 <img class="rect" src="assets/Images/rect.png" alt="rect">
-                <div (click)="expand(3)" class="text_multiple">
-                  <img [ngClass]="thirdBlock ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
-                  <p class="dt_texts">1 сентября -&nbsp;</p>
-                  <p class="te_gen">День передачи Учения. Сарасвати-хома.</p>
+                <div (click)="expand(8)" class="text_multiple">
+                  <img [ngClass]="hasExpand[8] ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
+                  <p class="dt_texts">6-7 сентября -&nbsp;</p>
+                  <p class="te_gen"><span>самостоятельное размещение в отелях в Варкале.</span></p>
                 </div>
-                <div *ngIf="thirdBlock" class="more_info">
+                <div *ngIf="hasExpand[8]" class="more_info">
                   <div class="text_wrapper">
                     <ul>
-                      <li class="te_gen">Празднование Ганеша-чатуртхи и Шрипада-джаянти!</li>
-                      <li class="te_gen">Хома (огненный ритуал) Ганеше или Даттатрейе</li>
-                      <li class="te_gen">Большой Символ Веры - Церемония вступления в
-                        Традицию Сатсанги Гуру</li>
-                      <li class="te_gen">1 сентября – День передачи Учения Сарасвати-хома,
-                        передачи в практики от Гуру и монахов</li>
-                      <li class="te_gen">Священный ритуал открытия Храма Свами Брахмананды!</li>
-                      <li class="te_gen">Семинар с Гуру свами Вишнудевананда Гири -
-                        «Блаженство энергии и Ясный Свет»</li>
-                      <li class="te_gen">Встреча с преданными свами Брахмананды</li>
-                      <li class="te_gen">Экскурсии по местным храмам переезд на море</li>
+                      <li class="te_gen">самостоятельное размещение в отелях в Варкале </li>
                     </ul>
-                    <p class="te_gen wrap">КАЖДЫЙ ДЕНЬ!: медитации и практика на святом месте Маха-самадхи Свами
-                      Брахмананды на Холме Тигра.</p>
                   </div>
                   <div class="img_event_wrap">
                     <p class="gan_wrap">
-                      <video autoplay loop muted playsinline src="assets/Images/1.mp4"></video>
+                      <video autoplay loop muted playsinline src="assets/gif/6-7sep.mp4"></video>
+                      <!-- <img src="assets/Images/gan.png" alt="gan"> -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="plate_item">
+              <div class="pl_out-wrap">
+                <img class="rect" src="assets/Images/rect.png" alt="rect">
+                <div (click)="expand(9)" class="text_multiple">
+                  <img [ngClass]="hasExpand[9] ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
+                  <p class="dt_texts">8 сентября -&nbsp;</p>
+                  <p class="te_gen"><span>утренние практики с монахами, ИНИЦИАЦИИ (ДИКШИ), вечером бандара.</span></p>
+                </div>
+                <div *ngIf="hasExpand[9]" class="more_info">
+                  <div class="text_wrapper">
+                    <ul>
+                      <li class="te_gen">В этот день на берегу океана изменится духовная жизнь у тех, кто созрел для принятия дикши. Важность этого события невозможно описать словами.
+                        «Дикша — это событие, благодаря которому душа обретает божественную мудрость и освобождается от грехов и кармы» («Вишну-ямала»).
+                        Дикша — это посвящение, благодаря которому от Гуру к ученику, как от одного сосуда в другой, течет божественное знание об Абсолюте.
+                         </li>
+                         <li class="te_gen">Начнутся инициации с огненного ритуала (хома) для участников (дикшиты).</li>
+                         <li class="te_gen">И завершится день сакральных посвящений бандарой для Гуру и монахов.
+                          По наставлениям священных текстов, уважение, подношение пищи святым, садху и монахам удлиняет жизнь и очищает карму подносящего, считается мощным процессом накопления семян белой кармы.
+                          </li>
+                         <li class="te_gen">Прасад - это Брахман, он не отличен от Брахмана, Шивы и Ишта-дэваты. Мы оказываем почитание Им в форме прасада, раздавая его и вкушая.</li>
+                    </ul>
+                  </div>
+                  <div class="img_event_wrap">
+                    <p class="gan_wrap">
+                      <video autoplay loop muted playsinline src="assets/gif/8sep.mp4"></video>
+                      <!-- <img src="assets/Images/gan.png" alt="gan"> -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="plate_item">
+              <div class="pl_out-wrap">
+                <img class="rect" src="assets/Images/rect.png" alt="rect">
+                <div (click)="expand(10)" class="text_multiple">
+                  <img [ngClass]="hasExpand[10] ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
+                  <p class="dt_texts">9 сентября -&nbsp;</p>
+                  <p class="te_gen"><span>свободный день, практики с монахами,  сатсанг Гуру свами Вишнудевананда Гири.</span> </p>
+                </div>
+                <div *ngIf="hasExpand[10]" class="more_info">
+                  <div class="text_wrapper">
+                    <ul>
+                      <li class="te_gen">«Какова бы ни была цена, как бы трудно это ни было, какие бы препятствия ни возникали, никогда не пренебрегай обществом мудрых. Только сатсанг освещает дорогу жизни. Сатсанг превыше всех других видов религиозной практики: благотворительности, аскетизма, посещений святынь и исполнения ритуалов.» («Йога Васиштха») </li>
+                    </ul>
+                  </div>
+                  <div class="img_event_wrap">
+                    <p class="gan_wrap">
+                      <video autoplay loop muted playsinline src="assets/gif/9sep.mp4"></video>
+                      <!-- <img src="assets/Images/gan.png" alt="gan"> -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="plate_item">
+              <div class="pl_out-wrap">
+                <img class="rect" src="assets/Images/rect.png" alt="rect">
+                <div (click)="expand(11)" class="text_multiple">
+                  <img [ngClass]="hasExpand[11] ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
+                  <p class="dt_texts">10-11 сентября -&nbsp;</p>
+                  <p class="te_gen"><span>перелет в Дели. Экскурсия в храмовый комплекс Акшардхам в Дели</span></p>
+                </div>
+                <div *ngIf="hasExpand[11]" class="more_info">
+                  <div class="text_wrapper">
+                    <ul>
+                      <li class="te_gen">самостоятельное заселение в отели г.Дели </li>
+                      <li class="te_gen">Акшардха́м — индуистский храмовый комплекс, который вошёл в Книгу Рекордов Гиннеса как самый грандиозный индуистский храм в мире! Его строительство велось с участием 7 тысяч мастеров из Раджастхана, Ориссы и Бенгалии. </li>
+                    </ul>
+                  </div>
+                  <div class="img_event_wrap">
+                    <p class="gan_wrap">
+                      <video autoplay loop muted playsinline src="assets/gif/10-11sep.mp4"></video>
                       <!-- <img src="assets/Images/gan.png" alt="gan"> -->
                     </p>
                   </div>
@@ -452,32 +526,31 @@
             <div class="plate_item">
               <div class="pl_out-wrap">
                 <img class="rect" src="assets/Images/rect.png" alt="rect">
-                <div (click)="expand(3)" class="text_multiple">
-                  <img [ngClass]="thirdBlock ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
-                  <p class="dt_texts">1 сентября -&nbsp;</p>
-                  <p class="te_gen">День передачи Учения. Сарасвати-хома.</p>
+                <div (click)="expand(12)" class="text_multiple">
+                  <img [ngClass]="hasExpand[12] ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
+                  <p class="dt_texts">12-18 сентября -&nbsp;</p>
+                  <p class="te_gen"><span>Переезд / перелет в Харидвар или Варанаси. <br> Встреча свами Вишнудевананда Гири и Махайоги Пайлота Бабаджи.</span></p>
                 </div>
-                <div *ngIf="thirdBlock" class="more_info">
+                <div *ngIf="hasExpand[12]" class="more_info">
                   <div class="text_wrapper">
                     <ul>
-                      <li class="te_gen">Празднование Ганеша-чатуртхи и Шрипада-джаянти!</li>
-                      <li class="te_gen">Хома (огненный ритуал) Ганеше или Даттатрейе</li>
-                      <li class="te_gen">Большой Символ Веры - Церемония вступления в
-                        Традицию Сатсанги Гуру</li>
-                      <li class="te_gen">1 сентября – День передачи Учения Сарасвати-хома,
-                        передачи в практики от Гуру и монахов</li>
-                      <li class="te_gen">Священный ритуал открытия Храма Свами Брахмананды!</li>
-                      <li class="te_gen">Семинар с Гуру свами Вишнудевананда Гири -
-                        «Блаженство энергии и Ясный Свет»</li>
-                      <li class="te_gen">Встреча с преданными свами Брахмананды</li>
-                      <li class="te_gen">Экскурсии по местным храмам переезд на море</li>
+                      <li class="te_gen">Программа севера завит от того, где будет встреча великих мастеров - Пайлот Бабаджи и Свами Вишнудевананда Гири.
+                        Есть два возможных направления программы:
+                        </li>
+                      <li class="te_gen">1) Поедем в ашрам Пайлота Бабаджи в САСАРАМЕ, и посетим так же священный древнейший город в мире, любимый город Господа Шивы – Варанаси и его известный храм Каши Вишванатх, где находится один из 12-ти джьотир-лингамов (самопроявленный Шивалингам).
+                        Маршрут: Дели - Варанаси - Сасарам
+                        </li>
+                      <li class="te_gen">2) Поедем к Бабаджи в его ашрам в ХАРИДВАРЕ, и так же посетим святой Ришикеш, считающийся мировой столицей йоги, и его особые места, посетим пещеру риши Васиштхи.
+                        Маршрут: Дели - Харидвар - Ришикеш
+                        </li>
+                      <li class="te_gen">В любом случае, будем ли мы в Харидваре или в Варанаси, мы получим благословения Матери Ганги.
+                        И в каком бы из ашрамов великого святого Пайлота Бабаджи мы не оказались - это всегда спонтанная, запредельная игра, непрерывный даршан. Само пребывание в поле двух реализованных Мастеров – это большое благословение.
+                        </li>
                     </ul>
-                    <p class="te_gen wrap">КАЖДЫЙ ДЕНЬ!: медитации и практика на святом месте Маха-самадхи Свами
-                      Брахмананды на Холме Тигра.</p>
                   </div>
                   <div class="img_event_wrap">
                     <p class="gan_wrap">
-                      <video autoplay loop muted playsinline src="assets/Images/1.mp4"></video>
+                      <video autoplay loop muted playsinline src="assets/gif/12-18sep.mp4"></video>
                       <!-- <img src="assets/Images/gan.png" alt="gan"> -->
                     </p>
                   </div>

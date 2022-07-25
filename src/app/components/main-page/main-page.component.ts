@@ -221,32 +221,10 @@ export class MainPageComponent implements OnInit {
       });
   }
 
+  hasExpand = {};
+
   expand(idx: number) {
-    switch (idx) {
-      case 1:
-        this.firstBlock = !this.firstBlock;
-        break;
-      case 2:
-        this.secondBlock = !this.secondBlock;
-        break;
-      case 3:
-        this.thirdBlock = !this.thirdBlock;
-        break;
-      case 4:
-        this.fourthBlock = !this.fourthBlock;
-        break;
-      case 5:
-        this.fifthBlock = !this.fifthBlock;
-        break;
-      case 6:
-        this.sixBlock = !this.sixBlock;
-        break;
-      case 7:
-        this.seventhBlock = !this.seventhBlock;
-        break;
-      default:
-        break;
-    }
+    this.hasExpand[idx] = !this.hasExpand[idx];
   }
 
   goToURl(url) {
