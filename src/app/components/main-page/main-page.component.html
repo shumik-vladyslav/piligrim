@@ -9,7 +9,7 @@
                 <p class="text_gen" (click)="scrollTo('about_guru')">О Гуру</p>
                 <p class="text_gen" (click)="scrollTo('about_program')">Программа</p>
                 <!-- <p class="text_gen" (click)="scrollTo('div-qa')">Вопросы и ответы</p> -->
-                <p class="text_gen" (click)="scrollTo('contacts')">Контакты</p>
+                <p class="text_gen" [routerLink]="['/contacts']">Контакты</p>
               </div>
             </div>
           </div>
@@ -25,7 +25,7 @@
             севера и юга Индии</span>
         </p>
       </div>
-      <!-- <p class="event_dates no_mob">30.08 - 18.09 2022</p> -->
+      <p class="event_dates no_mob">30.08 - 18.09 2022</p>
       <div class="list_items">
         <div class="list-item">
           <p class="img-w">
@@ -454,10 +454,10 @@
             <div class="plate_item">
               <div class="pl_out-wrap">
                 <img class="rect" src="assets/Images/rect.png" alt="rect">
-                <div (click)="expand(9)" class="text_multiple">
+                <div (click)="expand(9)" class="text_multiple double">
                   <img [ngClass]="hasExpand[9] ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
                   <p class="dt_texts">8 сентября -&nbsp;</p>
-                  <p class="te_gen"><span>утренние практики с монахами, ИНИЦИАЦИИ (ДИКШИ), вечером бандара.</span></p>
+                  <p class="te_gen"><span>утренние практики с монахами, ИНИЦИАЦИИ<br> (ДИКШИ), вечером бандара.</span></p>
                 </div>
                 <div *ngIf="hasExpand[9]" class="more_info">
                   <div class="text_wrapper">
@@ -490,10 +490,10 @@
             <div class="plate_item">
               <div class="pl_out-wrap">
                 <img class="rect" src="assets/Images/rect.png" alt="rect">
-                <div (click)="expand(10)" class="text_multiple">
+                <div (click)="expand(10)" class="text_multiple double">
                   <img [ngClass]="hasExpand[10] ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
                   <p class="dt_texts">9 сентября -&nbsp;</p>
-                  <p class="te_gen"><span>свободный день, практики с монахами, сатсанг Гуру свами Вишнудевананда
+                  <p class="te_gen"><span>свободный день, практики с монахами, сатсанг Гуру<br> Cвами Вишнудевананда
                       Гири.</span> </p>
                 </div>
                 <div *ngIf="hasExpand[10]" class="more_info">
@@ -517,10 +517,10 @@
             <div class="plate_item">
               <div class="pl_out-wrap">
                 <img class="rect" src="assets/Images/rect.png" alt="rect">
-                <div (click)="expand(11)" class="text_multiple">
+                <div (click)="expand(11)" class="text_multiple double">
                   <img [ngClass]="hasExpand[11] ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
                   <p class="dt_texts">10-11 сентября -&nbsp;</p>
-                  <p class="te_gen"><span>перелет в Дели. Экскурсия в храмовый комплекс Акшардхам в Дели</span></p>
+                  <p class="te_gen"><span>перелет в Дели. Экскурсия в храмовый комплекс<br> Акшардхам в Дели</span></p>
                 </div>
                 <div *ngIf="hasExpand[11]" class="more_info">
                   <div class="text_wrapper">
@@ -568,7 +568,7 @@
                 <div (click)="expand(12)" class="text_multiple double">
                   <img [ngClass]="hasExpand[12] ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
                   <p class="dt_texts">12-18 сентября -&nbsp;</p>
-                  <p class="te_gen"><span>Переезд / перелет в Харидвар или Варанаси. <br> Встреча свами Вишнудевананда
+                  <p class="te_gen"><span>Переезд / перелет в Харидвар или Варанаси. Встреча<br> Cвами Вишнудевананда
                       Гири и Махайоги Пайлота Бабаджи.</span></p>
                 </div>
                 <div *ngIf="hasExpand[12]" class="more_info">
@@ -653,8 +653,8 @@
         <div class="form-registration-form flex justify-between" [formGroup]="form" id="registration-form">
           <input type="text" class="input-form-gold" placeholder="имя" formControlName="name" />
           <input type="email" class="input-form-gold" placeholder="email" formControlName="email" />
-          <input type="text" class="input-form-gold" placeholder="телефон" formControlName="phone" />
-          <!-- <ngx-intl-tel-input
+          <!-- <input type="text" class="input-form-gold" placeholder="телефон" formControlName="phone" /> -->
+          <ngx-intl-tel-input
           [cssClass]="'custom'"
           [preferredCountries]="[CountryISO.UnitedStates, CountryISO.UnitedKingdom]"
           [enableAutoCountrySelect]="false"
@@ -667,7 +667,7 @@
           [phoneValidation]="true"
           name="phone"
           formControlName="phone"
-        ></ngx-intl-tel-input> -->
+        ></ngx-intl-tel-input>
         </div>
         <div class="registration-form-button flex justify-center items-center">
           <button class="btn_gen s reg" (click)="sendRegistrationData()" [disabled]="!form.valid"
