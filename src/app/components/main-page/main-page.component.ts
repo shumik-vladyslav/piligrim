@@ -19,10 +19,10 @@ export class MainPageComponent implements OnInit {
   hasExpand = {};
 
   separateDialCode = true;
-	SearchCountryField = SearchCountryField;
-	CountryISO = CountryISO;
+  SearchCountryField = SearchCountryField;
+  CountryISO = CountryISO;
   PhoneNumberFormat = PhoneNumberFormat;
-	preferredCountries: CountryISO[] = [CountryISO.UnitedStates, CountryISO.UnitedKingdom];
+  preferredCountries: CountryISO[] = [CountryISO.UnitedStates, CountryISO.UnitedKingdom];
 
   @HostListener('window:scroll', ['$event']) onScrollEvent($event) {
     let header = document.querySelector('.head_wrap')
@@ -129,17 +129,17 @@ export class MainPageComponent implements OnInit {
   }
   selectedCountry = CountryISO["Ukraine"];
   ngOnInit(): void {
-    this.http.post("https://ip-api.com/json", {}).subscribe((resp:any)=>{
+    this.http.post("https://ip-api.com/json", {}).subscribe((resp: any) => {
       var countryCode = (resp && resp.country) ? resp.country : "us";
       console.log(CountryISO[resp.country]);
       console.log(resp.country);
 
 
       const findMe = Object.keys(CountryISO)[Object.values(CountryISO as any).indexOf("cz")];
-console.log(findMe);
+      console.log(findMe);
       this.selectedCountry = CountryISO[findMe];
     });
-this.activatedRoute.queryParams.subscribe((params) => {
+    this.activatedRoute.queryParams.subscribe((params) => {
       console.log(params);
       this.routeParams = params;
       // const userId = params['userId'];
@@ -270,8 +270,12 @@ this.activatedRoute.queryParams.subscribe((params) => {
       yOffSet = 40;
     } else if (window.innerWidth < 786) {
       yOffSet = 50;
-    } else {
+    } else if (window.innerWidth < 951) {
+      yOffSet = 75;
+    } else if (window.innerWidth < 1361) {
       yOffSet = 90;
+    } else {
+      yOffSet = 108;
     }
     const element = document.getElementById(id);
     const y = element.getBoundingClientRect().top + window.pageYOffset - yOffSet;
