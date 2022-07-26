@@ -656,18 +656,24 @@
           <!-- <input type="text" class="input-form-gold" placeholder="телефон" formControlName="phone" /> -->
           <ngx-intl-tel-input
           [cssClass]="'custom'"
-          [preferredCountries]="[CountryISO.UnitedStates, CountryISO.UnitedKingdom]"
-          [enableAutoCountrySelect]="false"
+          [preferredCountries]="preferredCountries"
+          [enableAutoCountrySelect]="true"
           [enablePlaceholder]="true"
           [searchCountryFlag]="true"
-          [searchCountryField]="[SearchCountryField.Iso2, SearchCountryField.Name]"
+          [searchCountryField]="[
+            SearchCountryField.Iso2,
+            SearchCountryField.Name
+          ]"
           [selectFirstCountry]="false"
           [selectedCountryISO]="CountryISO.India"
           [maxLength]="15"
           [phoneValidation]="true"
+          [separateDialCode]="true"
+          [numberFormat]="PhoneNumberFormat.National"
           name="phone"
           formControlName="phone"
-        ></ngx-intl-tel-input>
+        >
+        </ngx-intl-tel-input>
         </div>
         <div class="registration-form-button flex justify-center items-center">
           <button class="btn_gen s reg" (click)="sendRegistrationData()" [disabled]="!form.valid"
