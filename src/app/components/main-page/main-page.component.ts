@@ -129,13 +129,8 @@ export class MainPageComponent implements OnInit {
   }
   selectedCountry = CountryISO["Ukraine"];
   ngOnInit(): void {
-    this.http.post("https://ip-api.com/json", {}).subscribe((resp:any)=>{
-      var countryCode = (resp && resp.country) ? resp.country : "us";
-      console.log(CountryISO[resp.country]);
-      console.log(resp.country);
-
-
-      const findMe = Object.keys(CountryISO)[Object.values(CountryISO as any).indexOf("cz")];
+    this.http.get("https://api.ipregistry.co/?key=tryout", {}).subscribe((resp:any)=>{
+      const findMe = Object.keys(CountryISO)[Object.values(CountryISO as any).indexOf(resp.location.country.code.toLowerCase())];
 console.log(findMe);
       this.selectedCountry = CountryISO[findMe];
     });
