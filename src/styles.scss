@@ -255,9 +255,9 @@ ngx-intl-tel-input input[disabled] {
   padding: 0 40px 0 84px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease-out;
+  // transition: max-height 0.5s ease-out;
   &.expanded {
-    transition: max-height 0.5s ease-in;
+    // transition: max-height 0.5s ease-in;
     padding: 0 40px 35px 84px;
     max-height: 10000px;
   }
