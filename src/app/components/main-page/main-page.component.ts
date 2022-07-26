@@ -129,7 +129,7 @@ export class MainPageComponent implements OnInit {
   }
   selectedCountry = CountryISO["Ukraine"];
   ngOnInit(): void {
-    this.http.post("http://ip-api.com/json", {}).subscribe((resp:any)=>{
+    this.http.post("https://ip-api.com/json", {}).subscribe((resp:any)=>{
       var countryCode = (resp && resp.country) ? resp.country : "us";
       console.log(CountryISO[resp.country]);
       console.log(resp.country);
