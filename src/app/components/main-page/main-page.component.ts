@@ -17,7 +17,7 @@ export class MainPageComponent implements OnInit {
   url = "https://b24-ay5iam.bitrix24.eu/rest/4/95igs0uaxwczeh83/";
   hasExpand = {};
 
-  separateDialCode = false;
+  separateDialCode = true;
 	SearchCountryField = SearchCountryField;
 	CountryISO = CountryISO;
   PhoneNumberFormat = PhoneNumberFormat;
@@ -119,7 +119,7 @@ export class MainPageComponent implements OnInit {
     this.form = new FormGroup({
       name: new FormControl('', Validators.required),
       email: new FormControl('', [emailValidator()]),
-      phone: new FormControl('', [Validators.required, phoneValidator()]),
+      phone: new FormControl('', [Validators.required]),
     });
 
     generalService.currentLanguage.subscribe(res => {
@@ -179,7 +179,7 @@ export class MainPageComponent implements OnInit {
         {
           fields: {
             "NAME": form.name,
-            PHONE: [{ VALUE: form.phone, VALUE_TYPE: "WORK" }],
+            PHONE: [{ VALUE: form.phone.e164Number, VALUE_TYPE: "WORK" }],
             EMAIL: [{ VALUE: form.email, VALUE_TYPE: "HOME" }],
             UTM_CAMPAIGN: this.routeParams?.utm_campaign,
             UTM_MEDIUM: this.routeParams?.utm_medium,
