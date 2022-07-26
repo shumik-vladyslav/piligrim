@@ -6,6 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { emailValidator, phoneValidator } from 'src/app/services/validation.service';
 import { GeneralServiceService } from 'src/app/services/general-service.service';
 import { CountryISO, PhoneNumberFormat, SearchCountryField } from 'ngx-intl-tel-input';
+import * as moment from 'moment-timezone';
 
 @Component({
   selector: 'app-main-page',
@@ -14,7 +15,7 @@ import { CountryISO, PhoneNumberFormat, SearchCountryField } from 'ngx-intl-tel-
 })
 
 export class MainPageComponent implements OnInit {
-  url = "https://b24-ay5iam.bitrix24.eu/rest/4/95igs0uaxwczeh83/";
+  url = "https://vosd.bitrix24.eu/rest/4/95igs0uaxwczeh83/";
   hasExpand = {};
 
   separateDialCode = true;
@@ -126,14 +127,28 @@ export class MainPageComponent implements OnInit {
       // this.language = res;
     })
   }
+  selectedCountry = CountryISO["Ukraine"];
   ngOnInit(): void {
-    this.activatedRoute.queryParams.subscribe((params) => {
+    this.http.post("http://ip-api.com/json", {}).subscribe((resp:any)=>{
+      var countryCode = (resp && resp.country) ? resp.country : "us";
+      console.log(CountryISO[resp.country]);
+      console.log(resp.country);
+
+
+      const findMe = Object.keys(CountryISO)[Object.values(CountryISO as any).indexOf("cz")];
+console.log(findMe);
+      this.selectedCountry = CountryISO[findMe];
+    });
+this.activatedRoute.queryParams.subscribe((params) => {
       console.log(params);
       this.routeParams = params;
       // const userId = params['userId'];
       // console.log(userId);
     });
   }
+
+
+
 
   sendRegistrationData() {
     const form = this.form.value;
