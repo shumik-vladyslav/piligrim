@@ -11,6 +11,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ThanksPageComponent } from './components/thanks-page/thanks-page.component';
 import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
+import { ContactsComponent } from './components/contacts/contacts.component';
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -18,7 +19,8 @@ export function createTranslateLoader(http: HttpClient) {
   declarations: [
     AppComponent,
     MainPageComponent,
-    ThanksPageComponent
+    ThanksPageComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,
