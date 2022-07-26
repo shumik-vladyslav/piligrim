@@ -122,9 +122,12 @@ ul li {
 .arr_m {
   position: absolute;
   left: 65px;
+  transition: all .3s ease 0s;
+    transform: rotate(0deg);
   cursor: pointer;
   &.expand {
     transform: rotate(90deg);
+    transition: all .3s ease 0s;
   }
 }
 .iti {
@@ -249,7 +252,15 @@ ngx-intl-tel-input input[disabled] {
   margin: -4px 44px 0px 45px;
   border: 4px solid #e9c66d;
   border-top: 0px;
-  padding: 0 40px 35px 84px;
+  padding: 0 40px 0 84px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  &.expanded {
+    transition: max-height 0.5s ease-in;
+    padding: 0 40px 35px 84px;
+    max-height: 10000px;
+  }
 }
 .text_wrapper {
   width: 60%;
@@ -302,12 +313,30 @@ body {
 .main-wrapper {
   background-color: #e2eef5;
 }
+.dat_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 100px;
+  margin-bottom: -35px;
+}
 .main_title_text {
-  font-family: Friz, sans-serif;
+  font-family: "Lobster", cursive;
   font-size: 4.1vw;
-  color: #c9000b;
+  color: #e22a19;
   line-height: 1;
   margin-bottom: 22px !important;
+}
+.d_ft {
+  font-family: Georgia;
+  font-weight: bold;
+  color: #e22a19;
+  font-size: 62px;
+  &.s {
+    line-height: 1.5;
+    font-size: 40px;
+    font-weight: lighter;
+  }
 }
 .text_secondary {
   font-size: 2.5vw;
@@ -372,7 +401,7 @@ body {
   cursor: pointer;
   &:hover {
     transform: scale(1.1);
-    transition: .5s;
+    transition: 0.5s;
   }
 }
 .form_t {
@@ -428,10 +457,11 @@ body {
   &.no_mob {
     display: none;
     font-size: 38px;
+    font-family: "Lobster", cursive;
     margin-top: 0 !important;
-    color: #c9000b;
+    color: #e22a19;
     position: relative;
-    text-shadow: 0px 0px 7px black;
+    // text-shadow: 0px 0px 7px black;
     right: unset;
     left: 0px !important;
     transform: translate(0%);
@@ -465,10 +495,10 @@ body {
   font-family: "Georgia", sans-serif;
   font-weight: 400;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
   &:hover {
     transform: scale(1.1);
-    transition: .5s;
+    transition: 0.5s;
   }
 }
 .program-forum {
@@ -771,7 +801,7 @@ body {
     height: 22px;
     border-radius: 50%;
     margin: 0 30px 0 0;
-    &.f {
+    &.fd {
       margin: 0 0 0 30px;
     }
   }
@@ -783,7 +813,7 @@ body {
   display: flex;
   &.fst {
     width: 48%;
-    .bk_wrap.f {
+    .bk_wrap.fw {
       width: 54%;
     }
   }
@@ -953,7 +983,7 @@ body {
   max-width: 1920px;
   padding: 0 100px 0 0;
   margin: 0 auto;
-  height: 90px;
+  height: 108px;
 }
 .header_wrapper {
   width: 55%;
@@ -1019,6 +1049,16 @@ body {
   }
 }
 @media (max-width: 1685px) {
+  .head_in {
+    padding: 0 40px 0 0;
+  }
+  .dat_wrap {
+    padding-left: 40px;
+    margin-bottom: -25px;
+  }
+  .d_ft {
+    font-size: 50px;
+  }
   .more_info {
     margin: -4px 39px 0px 39px;
   }
@@ -1096,7 +1136,7 @@ body {
   }
 }
 @media (max-width: 1590px) {
-  .m_top.f {
+  .m_top.fk {
     font-size: 45px;
   }
   .event_dates {
@@ -1165,7 +1205,7 @@ body {
     height: 75px;
     border-radius: 20px;
     font-size: 32px;
-    transition: .5s;
+    transition: 0.5s;
   }
   .block_master.right {
     padding: 0 0 0 20px;
@@ -1196,6 +1236,18 @@ body {
   }
 }
 @media (max-width: 1360px) {
+  .head_in {
+    height: 90px;
+  }
+  .dat_wrap {
+    margin-bottom: -15px;
+  }
+  .d_ft {
+    font-size: 38px;
+    &.s {
+      font-size: 30px;
+    }
+  }
   .te_gen {
     font-size: 24px;
   }
@@ -1259,12 +1311,12 @@ body {
   .iti .dropdown-menu.country-dropdown {
     width: 275px !important;
   }
-  .event_dates {
-    &.no_mob {
-      display: block;
-      text-shadow: 0px 0px 7px #c65353;
-    }
-  }
+  // .event_dates {
+  //   &.no_mob {
+  //     display: block;
+  //     text-shadow: 0px 0px 7px #c65353;
+  //   }
+  // }
   .main_title_text {
     font-size: 65px;
   }
@@ -1335,7 +1387,6 @@ body {
     left: 6px;
   }
   .arr_m.expand {
-    transform: rotate(90deg);
     height: 38px;
     left: 10px;
   }
@@ -1419,8 +1470,8 @@ body {
     }
   }
   .header_wrapper {
-    width: 100%;
-    margin-left: 50px;
+    width: 48%;
+    margin-left: auto;
   }
   .head_in {
     padding: 0 50px 0 0;
@@ -1434,7 +1485,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
-  .tw_wrap.fst .bk_wrap.f {
+  .tw_wrap.fst .bk_wrap.fw {
     width: auto;
   }
   .tw_wrap.scd {
@@ -1491,12 +1542,21 @@ body {
   }
 }
 @media (max-width: 950px) {
+  .head_in {
+    height: 75px;
+  }
   .iti__selected-flag {
     transform: scale(1.5);
   }
-  //   .iti--allow-dropdown input[type=tel] {
-  //     padding-left: 95px !important;
-  // }
+  .d_ft {
+    font-size: 30px;
+    &.s {
+      font-size: 22px;
+    }
+  }
+  .dat_wrap {
+    margin-bottom: -12px;
+  }
   .iti--allow-dropdown input[type="tel"] {
     padding-left: 110px !important;
   }
@@ -1580,7 +1640,7 @@ body {
     width: 50%;
     margin-top: 0;
   }
-  .tw_wrap.fst .bk_wrap.f {
+  .tw_wrap.fst .bk_wrap.fw {
     width: 50%;
   }
   .divider_sc.sc {
@@ -1592,7 +1652,7 @@ body {
   .tw_wrap.last .bk_wrap .divider_sc {
     display: block;
   }
-  .bk_wrap.f {
+  .bk_wrap.fw {
     margin-top: 48px;
   }
   .bk_wrap.s {
@@ -1614,8 +1674,17 @@ body {
   }
 }
 @media (max-width: 786px) {
+  .dat_wrap {
+    display: none;
+  }
   .bottom_social {
     flex-direction: column;
+  }
+  .header_wrapper {
+    width: 100%;
+  }
+  .event_dates.no_mob {
+    display: block;
   }
   .video_master {
     height: 310px;
@@ -1798,7 +1867,7 @@ body {
   .bk_wrap.s {
     margin-top: 0;
   }
-  .tw_wrap.fst .bk_wrap.f {
+  .tw_wrap.fst .bk_wrap.fw {
     width: 100%;
   }
   .divider_sc {
@@ -1858,7 +1927,7 @@ body {
     height: 12px;
     margin: 0 10px 0 0;
   }
-  .m_top span.f {
+  .m_top span.fd {
     margin: 0 0 0 10px;
   }
   .support {
@@ -1935,7 +2004,7 @@ body {
   .m_wrapper {
     padding: 20px 0 20px 0;
   }
-  .m_top.f {
+  .m_top.fk {
     margin-left: 0px !important;
     font-size: 30px;
   }
@@ -1958,6 +2027,12 @@ body {
   }
 }
 @media (max-width: 480px) {
+  .event_dates.no_mob {
+    font-size: 27px;
+  }
+  .g_wrap {
+    margin: 15px 0 !important;
+  }
   .bottom_section {
     margin-top: 20px !important;
   }

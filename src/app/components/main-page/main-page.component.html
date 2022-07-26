@@ -3,6 +3,10 @@
     <div class="header">
       <div class="head_wrap">
         <div class="head_in">
+          <div class="dat_wrap">
+            <p class="d_ft">30.08 - 18.09</p>
+            <p class="d_ft s">2022</p>
+          </div>
           <div class="header_wrapper">
             <div class="menu_wrap">
               <div class="w_wrap">
@@ -96,7 +100,7 @@
           </div>
           <div class="block_master right">
             <div class="m_title">
-              <p class="m_top f"><span></span> Знакомство с мастером <span class="f"></span></p>
+              <p class="m_top fk"><span></span> Знакомство с мастером <span class="fd"></span></p>
             </div>
             <div class="about_master">
               <p class="m_name">
@@ -155,7 +159,7 @@
   <div class="bl_height">
     <div id="about_program" class="wrapper">
       <div class="bh_wrapper">
-        <p class="m_top"><span></span>Этапы и программа<span class="f"></span></p>
+        <p class="m_top"><span></span>Этапы и программа<span class="fd"></span></p>
         <div class="level_wrap">
           <div class="header_cont">
             <div class="num">
@@ -179,7 +183,7 @@
                   <p class="dt_texts">30 августа -&nbsp;</p>
                   <p class="te_gen"><span>приезд Гуру, монахов и гостей в «Авадхута сиддха ашрам»</span></p>
                 </div>
-                <div *ngIf="hasExpand[1]" class="more_info">
+                <div [ngClass]="hasExpand[1] ? 'expanded' : ''" class="more_info">
                   <div class="text_wrapper">
                     <ul>
                       <li class="te_gen">Заезд, размещение; заселение гостей в отели поблизости.</li>
@@ -203,7 +207,7 @@
                   <p class="te_gen"><span>празднование Ганеша-чатуртхи и Шрипада-джаянти. <br> Большой Символ Веры
                     </span></p>
                 </div>
-                <div *ngIf="hasExpand[2]" class="more_info">
+                <div [ngClass]="hasExpand[2] ? 'expanded' : ''" class="more_info">
                   <div class="text_wrapper">
                     <ul>
                       <li class="te_gen">Вместе с Гуру мы проведем хому (огненный ритуал) Ганеше</li>
@@ -249,7 +253,7 @@
                   <p class="dt_texts">1 сентября -&nbsp;</p>
                   <p class="te_gen"><span>День передачи Учения. Сарасвати-хома.</span></p>
                 </div>
-                <div *ngIf="hasExpand[3]" class="more_info">
+                <div [ngClass]="hasExpand[3] ? 'expanded' : ''" class="more_info">
                   <div class="text_wrapper">
                     <ul>
                       <li class="te_gen">Огненный ритуал (хома) энергии Истинной Мудрости – Сарасвати.
@@ -286,7 +290,7 @@
                   <p class="dt_texts">2 сентября -&nbsp;</p>
                   <p class="te_gen"><span>сакральный ритуал открытия Храма Свами Брахмананды.</span></p>
                 </div>
-                <div *ngIf="hasExpand[4]" class="more_info">
+                <div [ngClass]="hasExpand[4] ? 'expanded' : ''" class="more_info">
                   <div class="text_wrapper">
                     <ul>
                       <li class="te_gen">СВАМИ БРАХМАНАНДА ШРИ ШИВА ПРАБХАКАРА СИДДХА ЙОГИ ПАРАМАХАМСА – парамгуру нашей
@@ -320,7 +324,7 @@
                       энергии и Ясный Свет»</span>
                   </p>
                 </div>
-                <div *ngIf="hasExpand[5]" class="more_info">
+                <div [ngClass]="hasExpand[5] ? 'expanded' : ''" class="more_info">
                   <div class="text_wrapper">
                     <ul>
                       <li class="te_gen">Уникальная возможность получить прямые передачи в глубокие практики и бесценные
@@ -347,7 +351,7 @@
                       Пандианом.</span>
                   </p>
                 </div>
-                <div *ngIf="hasExpand[6]" class="more_info">
+                <div [ngClass]="hasExpand[6] ? 'expanded' : ''" class="more_info">
                   <div class="text_wrapper">
                     <ul>
                       <li class="te_gen">Свами Брахмананда Шри Шива Прабхакара Сиддха Йоги Парамахамса – это
@@ -378,7 +382,7 @@
                   <p class="te_gen"><span>окончание семинара, экскурсии по местным храмам<br>
                       и переезд на океан в Варкалу.</span></p>
                 </div>
-                <div *ngIf="hasExpand[7]" class="more_info">
+                <div [ngClass]="hasExpand[7] ? 'expanded' : ''" class="more_info">
                   <div class="text_wrapper">
                     <p class="te_gen wrap">Экскурсии по местным храмам: Аранмула темпл и Ченганнур Махадева темпл:</p>
                     <p class="te_gen wrap"><span>Аранмула темпл</span> - один из самых важных храмов Кришны в Керале и
@@ -436,7 +440,7 @@
                   <p class="dt_texts">6-7 сентября -&nbsp;</p>
                   <p class="te_gen"><span>самостоятельное размещение в отелях в Варкале.</span></p>
                 </div>
-                <div *ngIf="hasExpand[8]" class="more_info">
+                <div [ngClass]="hasExpand[8] ? 'expanded' : ''" class="more_info">
                   <div class="text_wrapper">
                     <ul>
                       <li class="te_gen">самостоятельное размещение в отелях в Варкале </li>
@@ -459,7 +463,7 @@
                   <p class="dt_texts">8 сентября -&nbsp;</p>
                   <p class="te_gen"><span>утренние практики с монахами, ИНИЦИАЦИИ<br> (ДИКШИ), вечером бандара.</span></p>
                 </div>
-                <div *ngIf="hasExpand[9]" class="more_info">
+                <div [ngClass]="hasExpand[9] ? 'expanded' : ''" class="more_info">
                   <div class="text_wrapper">
                     <ul>
                       <li class="te_gen">В этот день на берегу океана изменится духовная жизнь у тех, кто созрел для
@@ -496,7 +500,7 @@
                   <p class="te_gen"><span>свободный день, практики с монахами, сатсанг Гуру<br> Cвами Вишнудевананда
                       Гири.</span> </p>
                 </div>
-                <div *ngIf="hasExpand[10]" class="more_info">
+                <div [ngClass]="hasExpand[10] ? 'expanded' : ''" class="more_info">
                   <div class="text_wrapper">
                     <ul>
                       <li class="te_gen">«Какова бы ни была цена, как бы трудно это ни было, какие бы препятствия ни
@@ -522,7 +526,7 @@
                   <p class="dt_texts">10-11 сентября -&nbsp;</p>
                   <p class="te_gen"><span>перелет в Дели. Экскурсия в храмовый комплекс<br> Акшардхам в Дели</span></p>
                 </div>
-                <div *ngIf="hasExpand[11]" class="more_info">
+                <div [ngClass]="hasExpand[11] ? 'expanded' : ''" class="more_info">
                   <div class="text_wrapper">
                     <ul>
                       <li class="te_gen">самостоятельное заселение в отели г.Дели </li>
@@ -541,9 +545,9 @@
               </div>
             </div>
           </div>
-          <div class="g_wrap">
+          <!-- <div class="g_wrap">
 
-          </div>
+          </div> -->
         </div>
         <div class="level_wrap">
           <div class="header_cont">
@@ -571,7 +575,7 @@
                   <p class="te_gen"><span>Переезд / перелет в Харидвар или Варанаси. Встреча<br> Cвами Вишнудевананда
                       Гири и Махайоги Пайлота Бабаджи.</span></p>
                 </div>
-                <div *ngIf="hasExpand[12]" class="more_info">
+                <div [ngClass]="hasExpand[12] ? 'expanded' : ''" class="more_info">
                   <div class="text_wrapper">
                     <ul>
                       <li class="te_gen">Программа севера завит от того, где будет встреча великих мастеров - Пайлот
@@ -605,9 +609,9 @@
               </div>
             </div>
           </div>
-          <div class="g_wrap">
+          <!-- <div class="g_wrap">
 
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -615,7 +619,7 @@
   <div class="bl_second">
     <div class="wrapper">
       <div class="carousel_wrap">
-        <p class="m_top"><span></span>Фотогалерея<span class="f"></span></p>
+        <p class="m_top"><span></span>Фотогалерея<span class="fd"></span></p>
         <div class="tour_slide-wrap">
           <p (click)="previous()" class="arrow_w l">
             <img src="assets/Images/left.png" alt="arrow">
@@ -694,7 +698,7 @@
       </div>
       <div class="req_wrap">
         <div class="tw_wrap fst">
-          <div class="bk_wrap f">
+          <div class="bk_wrap fw">
             <p class="b-im_wrap">
               <img src="assets/Images/csob.png" alt="csob">
             </p>
