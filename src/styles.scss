@@ -122,12 +122,12 @@ ul li {
 .arr_m {
   position: absolute;
   left: 65px;
-  transition: all .3s ease 0s;
-    transform: rotate(0deg);
+  transition: all 0.3s ease 0s;
+  transform: rotate(0deg);
   cursor: pointer;
   &.expand {
     transform: rotate(90deg);
-    transition: all .3s ease 0s;
+    transition: all 0.3s ease 0s;
   }
 }
 .iti {
@@ -233,6 +233,19 @@ ngx-intl-tel-input input::placeholder {
 
 ngx-intl-tel-input input[disabled] {
   background-color: #e5eaf1;
+}
+.plates_wrap {
+  .txt_pl {
+    text-align: center;
+    margin-top: 40px !important;
+  }
+}
+.text_wrapper p.te_gen.dd {
+  margin-top: 5px !important;
+  margin-bottom: 25px !important;
+  white-space: unset;
+  line-height: 1;
+  font-size: 25px;
 }
 .gan_wrap {
   border-radius: 50%;
@@ -369,6 +382,9 @@ body {
   margin: 80px 0 !important;
   display: flex;
   justify-content: center;
+}
+.img_event_wrap {
+  margin-top: 55px;
 }
 .list-item {
   display: flex;
