@@ -46,8 +46,3 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# Env Configs
-
-src/environments/*
-!src/environments/*.example.ts
-!src/environments/environment.docker.ts
