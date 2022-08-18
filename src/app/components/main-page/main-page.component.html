@@ -691,7 +691,7 @@
                     <ul>
                       <li class="te_gen">РИШИКЕШ — святой город, признанный столицей йоги на планете! Название
                         происходит от слова “риши” — мудрец. Его так же называют воротами в Гималаи — отсюда паломники
-                        отправляются по горным святым местам. 
+                        отправляются по горным святым местам.
                         Здесь невероятные по красоте предгорья Гималайских гор, здесь река Ганга покидает горные ущелья
                         и полнокровно разливается по равнине. Вдоль ее берегов находится множество ашрамов. С древних
                         времен и по сей день, здесь находят пристанище святые мудрецы, многие выдающиеся гуру и йогины.
@@ -947,10 +947,22 @@
             <img src="assets/Images/dividerfrm.png" alt="divider">
           </p>
         </div>
-        <div class="form-registration-form flex justify-between" [formGroup]="form" id="registration-form">
+        <div class="bottom_social loi">
+          <div class="soc_w">
+            <p (click)="goToURl('mailto:kuchernv@mail.ru')" class="more"><img class="soc_l"
+                src="assets/Images/gmail.png" alt="instagram">kuchernv@mail.ru</p>
+            <div (click)="goToURl('mailto:Shrinandini108@gmail.com')" class="more das"><p class="rty"></p>Shrinandini108@gmail.com</div>
+            <p (click)="goToURl('https://t.me/Nadya_M')" class="more"><img class="soc_l"
+                src="assets/Images/telega.png" alt="telegram">@Nadya_M
+            </p>
+            <div (click)="goToURl('https://t.me/Shrinandini108')" class="more"><p class="rty"></p>t.me/Shrinandini108
+            </div>
+          </div>
+        </div>
+        <!-- <p class="gallery_"></p> -->
+        <!-- <div class="form-registration-form flex justify-between" [formGroup]="form" id="registration-form">
           <input type="text" class="input-form-gold" placeholder="имя" formControlName="name" />
           <input type="email" class="input-form-gold" placeholder="email" formControlName="email" />
-          <!-- <input type="text" class="input-form-gold" placeholder="телефон" formControlName="phone" /> -->
           <ngx-intl-tel-input [cssClass]="'custom'" [preferredCountries]="preferredCountries"
             [enableAutoCountrySelect]="true" [enablePlaceholder]="true" [searchCountryFlag]="true" [searchCountryField]="[
             SearchCountryField.Iso2,
@@ -959,10 +971,10 @@
             [phoneValidation]="true" [separateDialCode]="true" [numberFormat]="PhoneNumberFormat.National" name="phone"
             formControlName="phone">
           </ngx-intl-tel-input>
-        </div>
+        </div> -->
         <div class="registration-form-button flex justify-center items-center">
-          <button class="btn_gen s reg" (click)="sendRegistrationData()" [disabled]="!form.valid"
-            [ngClass]="!form.valid ? 'disabled' : 'enabled'">Оставить заявку</button>
+          <!-- <button class="btn_gen s reg" (click)="sendRegistrationData()" [disabled]="!form.valid"
+            [ngClass]="!form.valid ? 'disabled' : 'enabled'">Оставить заявку</button> -->
         </div>
       </div>
     </div>
