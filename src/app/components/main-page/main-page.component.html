@@ -1,14 +1,22 @@
 <div class="main-wrapper">
   <div class="wrapper main">
+    <img *ngIf="desktop" style="position: relative;" src="assets/Images/header.png" alt="pic">
+    <img *ngIf="tablet" style="position: relative;" src="assets/Images/header1.png" alt="pic">
+    <img *ngIf="mobile" style="position: relative;" src="assets/Images/header2.png" alt="pic">
+    <!-- <img style="position: relative;" src="assets/Images/header.png" alt="pic"> -->
+    <div class="bottom_section">
+      <div class="buttons_wrap">
+        <button (click)="scrollTo('apply')" class="btn_gen s">Оставить заявку</button>
+        <button (click)="scrollTo('about_program')" class="btn_gen">Программа</button>
+      </div>
+    </div>
     <div class="header">
       <div class="head_wrap">
         <div class="head_in">
-          <div class="dat_wrap">
-            <!-- <p class="d_ft">30.08 - 18.09</p>
-            <p class="d_ft s">2022</p> -->
+          <!-- <div class="dat_wrap">
             <p class="d_ft">11.02 - 20.02</p>
             <p class="d_ft s">2023</p>
-          </div>
+          </div> -->
           <div class="header_wrapper">
             <div class="menu_wrap">
               <div class="w_wrap">
@@ -22,24 +30,24 @@
         </div>
       </div>
     </div>
-    <div class="head_content">
-      <div>
+    <!-- <div class="head_content"> -->
+      <!-- <div>
         <p class="main_title_text">Семинар и Махашиваратри в Турции</p>
         <p class="text_secondary">
           с просветлённым мастером традиции<br>
           сиддхов<span> и монахами на берегу моря<br>
           </span>
         </p>
-      </div>
-      <p class="event_dates no_mob">11-20 февраля 2023</p>
-      <div class="list_items">
-        <div class="list-item">
+      </div> -->
+      <!-- <p class="event_dates no_mob">11-20 февраля 2023</p> -->
+      <!-- <div class="list_items"> -->
+        <!-- <div class="list-item">
           <p class="img-w">
             <img src="assets/Images/figure.png" alt="om">
           </p>
           <p class="list_text"><span class="second"> Семинар и передачи Мастера и старших монахов</span></p>
-        </div>
-        <div class="list-item">
+        </div> -->
+        <!-- <div class="list-item">
           <p class="img-w">
             <img src="assets/Images/figure.png" alt="om">
           </p>
@@ -58,20 +66,10 @@
             <img src="assets/Images/figure.png" alt="om">
           </p>
           <p class="list_text"><span class="second">Великая ночь Шивы – <br> Махашиваратри 18-19 февраля</span></p>
-        </div>
-      </div>
-      <div class="bottom_section">
-        <div class="buttons_wrap">
-          <button (click)="scrollTo('apply')" class="btn_gen s">Оставить заявку</button>
-          <button (click)="scrollTo('about_program')" class="btn_gen">Программа</button>
-        </div>
-        <p class="lamp">
-          <img src="assets/Images/lamp.png" alt="lamp">
-        </p>
-        <p class="g_title">Гуру Cвами<br>
-          Вишнудевананда Гири</p>
-      </div>
-    </div>
+        </div> -->
+      <!-- </div> -->
+      
+    <!-- </div> -->
   </div>
   <div class="bl_second">
     <div id="about_guru" class="wrapper">
@@ -173,10 +171,10 @@
               <p class="lv">этап</p>
             </div> -->
             <div class="h_cont">
-              <p class="txt_pl">Великая ночь Шивы – Махашиваратри 18-19 февраля </p>
+              <!-- <p class="txt_pl">Великая ночь Шивы – Махашиваратри 18-19 февраля </p> -->
               <div class="dt_wrap">
                 <img src="assets/Images/cald.png" alt="wrap">
-                <p class="dt_txt">30 августа - 06 сентября</p>
+                <p class="dt_txt">11 - 20 февраля</p>
               </div>
             </div>
           </div>
@@ -210,7 +208,7 @@
                 <div (click)="expand(2)" class="text_multiple double">
                   <img [ngClass]="hasExpand[2] ? 'expand' : ''" class="arr_m" src="assets/Images/arr.png">
                   <p class="dt_texts">12 - 16 февраля-&nbsp;</p>
-                  <p class="te_gen"><span> 5-дневный семинар с Гуру "Глубинные практики Ануттара-тантры"
+                  <p class="te_gen"><span> 5-дневный семинар с Гуру<br> "Глубинные практики Ануттара-тантры"
                     </span></p>
                 </div>
                 <div [ngClass]="hasExpand[2] ? 'expanded' : ''" class="more_info">

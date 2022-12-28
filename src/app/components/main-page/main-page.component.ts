@@ -33,6 +33,9 @@ export class MainPageComponent implements OnInit {
   first: number = 0;
   middle: number = 1;
   last: number = 2;
+  tablet = false;
+  mobile = false;
+  desktop = true;
   form: FormGroup;
   routeParams;
   slides: any = [
@@ -46,19 +49,19 @@ export class MainPageComponent implements OnInit {
     },
     {
       index: 2,
-      path: 'assets/Images/slide3.JPG',
+      path: 'assets/Images/slide3.jpg',
     },
     {
       index: 3,
-      path: 'assets/Images/slide4.JPG',
+      path: 'assets/Images/slide4.jpg',
     },
     {
       index: 4,
-      path: 'assets/Images/slide5.JPG',
+      path: 'assets/Images/slide5.jpg',
     },
     {
       index: 5,
-      path: 'assets/Images/slide6.JPG',
+      path: 'assets/Images/slide6.jpg',
     },
     {
       index: 6,
@@ -66,7 +69,7 @@ export class MainPageComponent implements OnInit {
     },
     {
       index: 7,
-      path: 'assets/Images/slide8.JPG',
+      path: 'assets/Images/slide8.jpg',
     },
     {
       index: 8,
@@ -74,15 +77,15 @@ export class MainPageComponent implements OnInit {
     },
     {
       index: 9,
-      path: 'assets/Images/slide10.JPG',
+      path: 'assets/Images/slide10.jpg',
     },
     {
       index: 10,
-      path: 'assets/Images/slide11.JPG',
+      path: 'assets/Images/slide11.jpg',
     },
     {
       index: 11,
-      path: 'assets/Images/slide12.JPG',
+      path: 'assets/Images/slide12.jpg',
     }
   ]
 
@@ -122,7 +125,14 @@ export class MainPageComponent implements OnInit {
       email: new FormControl('', [emailValidator()]),
       phone: new FormControl('', [Validators.required]),
     });
-
+    if (window.innerWidth < 951) {
+      this.desktop = false;
+      this.tablet = true;
+    }
+    if (window.innerWidth < 551) {
+      this.tablet = false;
+      this.mobile = true;
+    }
     generalService.currentLanguage.subscribe(res => {
       // this.language = res;
     })

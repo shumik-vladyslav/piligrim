@@ -378,11 +378,12 @@ body {
   }
 }
 .head_content {
-  position: relative;
+  position: absolute;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  height: calc(100vh - 150px);
+  bottom: 95px;
+  z-index: 11;
 }
 .list_items {
   margin-top: 15px;
@@ -443,9 +444,11 @@ body {
   line-height: 1;
 }
 .bottom_section {
-  margin-top: 20px;
+  margin-top: -130px;
+  margin-left: 100px;
   display: flex;
   justify-content: space-between;
+  position: absolute;
 }
 .list_text {
   font-size: 59px;
@@ -506,18 +509,13 @@ body {
 .wrapper {
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 100px 20px 100px;
+  padding: 0 100px;
   box-sizing: border-box;
   &.no-pad {
     padding: 0;
   }
   &.main {
-    background: url(./assets/Images/header.png);
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    background-position-x: right;
-    // height: 100vh;
+    padding: 0;
   }
 }
 .text_gen {
@@ -551,9 +549,10 @@ body {
   word-break: break-all;
 }
 .buttons_wrap {
-  display: flex;
-  width: 50%;
-  justify-content: space-between;
+  width: 100%;
+  .s{
+    margin-right: 30px;
+  }
 }
 .gallery_t {
   font-size: 50px;
@@ -952,6 +951,7 @@ body {
 .head_wrap {
   position: fixed;
   width: 100%;
+  top: 0;
   z-index: 1000;
   background: transparent;
   margin: 0 auto;
@@ -973,6 +973,7 @@ body {
   height: 110px;
   justify-content: center;
   display: flex;
+  height: 0;
 }
 
 .registration-form-button {
@@ -1014,7 +1015,7 @@ body {
   max-width: 1920px;
   padding: 0 100px 0 0;
   margin: 0 auto;
-  height: 108px;
+  height: 70px;
 }
 .header_wrapper {
   width: 55%;
@@ -1095,6 +1096,9 @@ body {
   }
   .wrapper {
     padding: 0px 40px 15px 40px;
+    &.main {
+      padding: 0;
+    }
   }
   .event_dates {
     margin-top: 45px !important;
@@ -1186,6 +1190,9 @@ body {
   }
 }
 @media (max-width: 1510px) {
+  .bottom_section {
+    margin-top: -110px;
+  }
   ngx-intl-tel-input input {
     font-size: 25px !important;
   }
@@ -1358,10 +1365,6 @@ body {
   .list_items {
     margin-top: 20px;
   }
-  .wrapper.main {
-    background-size: unset;
-    height: 880px;
-  }
   .img-w {
     display: none;
   }
@@ -1396,6 +1399,9 @@ body {
   .registration-form-button {
     margin-bottom: 40px;
   }
+  .bottom_section {
+    margin-left: 65px;
+  }
   .program-forum {
     padding: 40px 0;
     height: auto;
@@ -1424,18 +1430,12 @@ body {
     height: 38px;
     left: 10px;
   }
-  .wrapper.main {
-    height: 730px;
-  }
   .g_title {
     font-size: 26px;
     margin-right: 10px !important;
   }
   .bottom_section {
-    margin-top: 20px;
-  }
-  .header {
-    height: 80px;
+    margin-top: -80px;
   }
   .s_wrap {
     flex-direction: column;
@@ -1576,6 +1576,9 @@ body {
   }
 }
 @media (max-width: 950px) {
+  .bottom_section {
+    margin-top: -200px;
+}
   .head_in {
     height: 75px;
   }
@@ -1759,9 +1762,6 @@ body {
     padding: 0 25px 0 0;
     height: 50px;
   }
-  .header {
-    height: 45px;
-  }
   .header_wrapper {
     margin-left: 25px;
   }
@@ -1771,6 +1771,9 @@ body {
   }
 }
 @media (max-width: 690px) {
+  .bottom_section {
+    margin-left: 30px;
+}
   .block_master {
     .m_top span {
       display: none;
@@ -2011,7 +2014,7 @@ body {
     margin: 15px 0 !important;
   }
   .bottom_section {
-    margin-top: 20px;
+    margin-top: -180px;
   }
   .n_sl.last_sl {
     width: 15%;
@@ -2069,9 +2072,6 @@ body {
   }
   .g_wrap {
     margin: 15px 0 !important;
-  }
-  .bottom_section {
-    margin-top: 20px !important;
   }
   .m_top {
     font-size: 24px;
@@ -2131,10 +2131,6 @@ body {
 @media (max-width: 450px) {
   .g_title {
     margin-top: 5px !important;
-  }
-  .wrapper.main {
-    height: 776px;
-    background-size: 1448px;
   }
 }
 @media (max-width: 380px) {
