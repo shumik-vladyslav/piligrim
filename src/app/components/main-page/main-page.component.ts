@@ -38,35 +38,35 @@ export class MainPageComponent implements OnInit {
   slides: any = [
     {
       index: 0,
-      path: 'assets/Images/slide1.png',
+      path: 'assets/Images/slide1.jpg',
     },
     {
       index: 1,
-      path: 'assets/Images/slide2.png',
+      path: 'assets/Images/slide2.jpg',
     },
     {
       index: 2,
-      path: 'assets/Images/slide3.png',
+      path: 'assets/Images/slide3.JPG',
     },
     {
       index: 3,
-      path: 'assets/Images/slide4.jpg',
+      path: 'assets/Images/slide4.JPG',
     },
     {
       index: 4,
-      path: 'assets/Images/slide5.jpg',
+      path: 'assets/Images/slide5.JPG',
     },
     {
       index: 5,
-      path: 'assets/Images/slide6.jpg',
+      path: 'assets/Images/slide6.JPG',
     },
     {
       index: 6,
-      path: 'assets/Images/slide7.jpg',
+      path: 'assets/Images/slide7.png',
     },
     {
       index: 7,
-      path: 'assets/Images/slide8.jpg',
+      path: 'assets/Images/slide8.JPG',
     },
     {
       index: 8,
@@ -74,15 +74,15 @@ export class MainPageComponent implements OnInit {
     },
     {
       index: 9,
-      path: 'assets/Images/slide10.jpg',
+      path: 'assets/Images/slide10.JPG',
     },
     {
       index: 10,
-      path: 'assets/Images/slide11.jpg',
+      path: 'assets/Images/slide11.JPG',
     },
     {
       index: 11,
-      path: 'assets/Images/slide12.jpg',
+      path: 'assets/Images/slide12.JPG',
     }
   ]
 
