@@ -33,20 +33,23 @@ export class MainPageComponent implements OnInit {
   first: number = 0;
   middle: number = 1;
   last: number = 2;
+  tablet = false;
+  mobile = false;
+  desktop = true;
   form: FormGroup;
   routeParams;
   slides: any = [
     {
       index: 0,
-      path: 'assets/Images/slide1.png',
+      path: 'assets/Images/slide1.jpg',
     },
     {
       index: 1,
-      path: 'assets/Images/slide2.png',
+      path: 'assets/Images/slide2.jpg',
     },
     {
       index: 2,
-      path: 'assets/Images/slide3.png',
+      path: 'assets/Images/slide3.jpg',
     },
     {
       index: 3,
@@ -62,7 +65,7 @@ export class MainPageComponent implements OnInit {
     },
     {
       index: 6,
-      path: 'assets/Images/slide7.jpg',
+      path: 'assets/Images/slide7.png',
     },
     {
       index: 7,
@@ -122,7 +125,14 @@ export class MainPageComponent implements OnInit {
       email: new FormControl('', [emailValidator()]),
       phone: new FormControl('', [Validators.required]),
     });
-
+    if (window.innerWidth < 951) {
+      this.desktop = false;
+      this.tablet = true;
+    }
+    if (window.innerWidth < 551) {
+      this.tablet = false;
+      this.mobile = true;
+    }
     generalService.currentLanguage.subscribe(res => {
       // this.language = res;
     })
